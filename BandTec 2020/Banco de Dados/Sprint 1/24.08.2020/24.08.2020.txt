@@ -1,0 +1,77 @@
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Dia 24/08/2020
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Atividade para dia 24/08/2020 (Criada no dia 17/08/2020)
+
+1-) Pesquise a diferença entre esses tipos de SGBD.
+
+R: RELACIONAIS - Os SGBDs relacionais são banco de dados que 
+                 modelam os dados no formato de tabelas, que podem 
+                 se relacionar entre si. Cada tabela pode possuir 
+                 diversos atributos, com diversos tipos de dados;
+ 
+   HIERÁRQUICO - Uma base de dados hierárquica é um tipo de 
+                 sistema de gerenciamento de banco de dados
+                 que conecta registros numa estrutura de dados 
+                 em árvore através de ligações de tal modo que 
+                 cada tipo de registro tenha apenas um possuidor.
+
+   EM REDE - é o modelo de dados que eliminou o conceito de hierarquia,
+             permitindo que um mesmo registro estivesse envolvido em 
+             várias associações, um registro filho pode ser ligado a mais 
+             de um registro pai, criando conexões bastante complexas e são 
+             bastante utilizados em sistemas para computadores de grande porte.
+
+   ORIENTADO A OBJETO - Um banco de dados orientado a objetos é um 
+                        banco de dados em que cada informação é 
+                        armazenada na forma de objetos, ou seja, 
+                        utiliza a estrutura de dados denominada 
+                        orientação a objetos, a qual permeia 
+                        as linguagens mais modernas. 
+
+
+
+2-) Pesquise também o que é um banco de dados NO-SQL.
+
+R: No-SQL (Not Only SQL) é o termo utilizado para banco de dados 
+   não relacionais de alto desempenho, onde geralmente não é utilizado 
+   o SQL como linguagem de consulta. Estes bancos utilizam diversos 
+   modelos de dados incluindo documentos, gráficos, chave-valor e colunares.
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+DBMS - Database Mamagement System
+
+Metadados: dados que descrevem como que os dados são estruturados 
+           (descrição dos dados) 
+(METADADO: dado sobre um dado. Um dado que descreve outro dado)
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+-- Criação do banco de dados (schema) aluno
+create database aluno;
+use aluno;  -- seleciona o banco de dados aluno
+-- isso é um comentário
+-- criação da tabela aluno
+create table aluno (
+  ra int primary key,    -- ra é a chave primária da tabela aluno 
+  nome varchar(50),
+  bairro varchar(40)
+);
+
+-- se criou a tabela com o nome aluco, como renomear?
+alter table aluco rename to aluno;
+-- ou também é possível excluir a tabela aluco, e refazer o comando com o nome certo
+drop table aluco; 
+
+-- exibir os dados da tabela aluno (todas as colunas)
+select * from aluno;
+-- exibir apenas a coluna ra da tabela aluno
+select ra from aluno;
+-- exibir apenas a coluna nome da tabela aluno
+select nome from aluno; 
+  

@@ -1,0 +1,73 @@
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
+Dia 17/08/2020
+
+Prof. Célia - Banco de Dados
+
+Ciência da Computação - IME/USP
+Administração de Empresas - FGV
+Analista de Software - Itautec Informática S.A.
+  - Interpretador das linguagens BASIC e LOGO para 
+    microprocessadores de 8 e 16 bits.
+  - Monitor transacional GRIP - middleware para desenvolvimento de aplicações de automação bancária e 
+    comercial - Plataformas: DOS, NetWare, Windows, Linux.
+Mestrado em Engenharia Elétrica - POLI e USP
+  - Área: Inteligência Artificial (Linguagem Natural)
+
+Tradutora técnica de artigos de revistas e livros de informática
+Analista de Software - CIS Eletrônica
+  - Software embarcado de equipamentos que fazem captura de 
+    dados: leitor de cartão magnético, leitor de código de barra, leitor de cheque, leitor biométrico.
+  - Software de drivers desses dispositivos
+
+Professora universitária - desde 2005
+  - UNIB, Faculdade Drummond, UNIP, Uninove, ESEG
+  - Bandtec - desde 2011
+    * Disciplinas: Sistemas Operacionais, Algoritmos, Paradigmas de 
+      Programação, Programação Orientada a Objetos, Estrutura de Dados,
+      Sistemas Distribuídos, Arquitetura Computacional, Banco de Dados.
+
+válvula > transistorchipsplaca de circuito impresso com vários 
+transistoresmicroprocessadoreschips com milhões ou dezenas de milhões de transistores
+
+BIOS = Basic Input Output System
+
+
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+Somos da área de TI - Tecnologia da Informação
+
+O que vem a ser informação?
+R: Seria um conjunto de dados que trazem algo com sentido concreto.
+ 
+Qual a diferença entre dados e informação?
+R: O dado sozinho não tem sentido direto, pois sozinho não tem valor; a informação é 
+   um conjunto de dados que trazem algo com sentido concreto.
+
+Qual a diferença entre dados, informação e conhecimento?
+R: O dado sozinho não tem sentido direto, pois sozinho não tem valor; a informação é 
+   um conjunto de dados que trazem algo com sentido concreto; 
+   O conhecimento é o que a informação leva consigo e é extraído 
+   um aprendizado ou conteúdo entendível dessa informação. 
+
+
+Renato de Oliveira Paulino to Everyone:  01:16 PM
+Basicamente dados seriam a matéria-prima da informação, 
+informação não tratada, é mediante os dados que se 
+constitui a informação. A informação são os dados já 
+trabalhados, sintetizados e o conhecimento é 
+adquirido mediante o acúmulo de informações
+
+Jorge Uliam de Lima to Everyone:  01:17 PM
+Dado = Registro aleátorio, "soltos"
+Informação = Estruturação de dados
+Conhecimento = Informação que torna-se uma experiência 
+do individuo quando processada, transformada e entendida
+
+SQL = Structured Query Language
+
+__________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________
+
+
