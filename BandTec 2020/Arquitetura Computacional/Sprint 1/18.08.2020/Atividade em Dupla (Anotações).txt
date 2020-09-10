@@ -1,0 +1,71 @@
+Notebook Lenovo I3 Tela 15.6 4GB RAM 1T BS145 (R$ 3.199,90)
+32 x 6 = 192
+
+1 - Faça um estudo comparativo entre celular e computador. 
+Funcionalidades disponíveis. (comparações de finalidades como ligações)
+
+R: O computador é a melhor opção para ambientes fixos (escritorio de um trabalho),
+possui um armazenamento de memória mais extenso e tem mais recursos disponiveis 
+com maior acessibilidade. Possui sua versão desktop, mais conhecida como notebook,
+elaboração de textos (digitação).
+ 
+
+2- Faça uma relação de processadores atuais e 
+qual sua tecnologia e principal vantagem
+
+R: 
+
+
+3 - Você vai fazer um pequeno projeto de computador 
+para 6 pessoas em uma empresa de contabilidade. 
+Qual tipo você recomendaria? Justifique a viabilidade do projeto. 
+Lembre-se que a internet é um fator fundamental. 
+
+Faça a cotação e avalie as condições técnicas e de investimento.
+(internet, impressora, qual software)
+cotação completa, levantar as especificações, preço, 
+cabo e mesa não precisam, softwares de sistemas operacionais) - valor livre - 
+(Java, não é pesado, requisitos minimos, ContMatic, 
+servidor para ligar na impressora, servidor de arquivos)
+- Software de Contabilidade - (plano de internet, fazer desenho 
+no slide que representasse a arquitetura) - licensa por mês do software
+- condições técnicas de investimento
+- custo de instalação (nosso - planos de manutenção)
+- custo mensal
+- Orçamento em T.I.
+- Suporte em meses a um custo
+- Servidor ser um computador a parte com 2T (possibilidade)    
+
+
+    JUSTIFICAR!!
+
+________________________________________________________________________________________________________________-
+
+
+
+Instalação de Notebooks (6 notebooks de funcionarios) = R$30,00 (6 notebooks R$180,00)
+
+Instalação do Servidor 2T(1 servidor) = R$120,00
+
+Custo manutenção = R$200,00 por mês
+
+Instalação da impressora = R$30,00 
+
+Internet da Empresa = Plano de Internet Vivo Fibra 
+                      Corporativo (300MB R$199,99 por mês)
+
+                                                                TOTAL = R$ 729,99
+
+
+
+Módulo Completo (Controle de Atendimento | CRM, Financeiro, 
+Serviços, Estoque, Compras e Vendas) = R$ 149,00 ao mês (4 adicionais = R$20,00)
+
+                                                         TOTAL = R$229,00 por mês
+
+
+TOTAL = 1408,99
+
+________________________________________________________________________________________________________________-
+
+

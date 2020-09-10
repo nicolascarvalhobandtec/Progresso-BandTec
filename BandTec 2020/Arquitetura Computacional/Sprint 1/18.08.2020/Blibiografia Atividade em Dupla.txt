@@ -1,0 +1,68 @@
+Notebook Lenovo I3 Tela 15.6 4GB RAM 1T BS145 (R$ 3.199,90)
+
+https://www.magazineluiza.com.br/notebook-lenovo-
+i3-tela-15-6-4gb-ram-1t-bs145/p/hfjca96752/in/note/
+________________________________________________________________________________________________
+
+Servidores
+
+https://www.accept.com.br/blog/infraestrutura/como-escolher-o-servidor-ideal/
+_______________________________________________________________________________________________
+
+Intel Core i3-6006u
+
+O Intel Core i3-6006U é um SoC dual-core ULV (ultra low voltage) 
+baseado na arquitetura Skylake, que foi lançado em novembro de 2016. 
+A CPU pode ser encontrada em portáteis pequenos e leves. 
+Além de dois núcleos da CPU com Hyper-Threading com velocidade 
+(bastante baixa) de 2 GHz (sem Turbo Boost), o chip também integra 
+uma GPU HD Graphics 520 (com velocidade de apenas 900 MHz) 
+e um controlador de memoria dual-channel DDR4-2133/DDR3L-1600. 
+O SoC é produzido usando um processo de 14 nm com transistores FinFET.
+
+https://www.notebookcheck.info/Intel-Core-i3-6006U-Notebook-Processor.211254.0.html
+________________________________________________________________________________________________
+
+
+Recomendada para quem deseja montar um PC de baixo custo, 
+o Ryzen 3 2200G é uma APU, que combina o processador e 
+a placa de vídeo integrada Vega 11 no mesmo chip. 
+O modelo tem quatro núcleos Zen rodando entre 3.5GHz 
+e 3.7GHz, com 6MB de memória cache.
+
+Apesar de não ter um processamento gráfico potente, 
+esse processador AMD é uma boa opção para quem não 
+pode investir em uma placa de vídeo dedicada e 
+pretende rodar programas mais simples. Como 
+todos os modelos da lista, ele tem soquete AM4 
+e suporte para memórias DDR4. Por ser um modelo 
+de entrada, é ideal para quem deseja montar um PC 
+gamer básico e com custo acessível.
+
+Características do processador:
+
+3.5GHz de frequência
+4 Núcleos com 4 Threads
+6MB de memória cache
+Suporte à memória DDR4
+Soquete AM4
+
+https://www.zoom.com.br/processador/deumzoom/melhor-processador-amd-ryzen
+________________________________________________________________________________________________
+
+Processador AMD Ryzen
+
+https://gizmodo.uol.com.br/ryzen-amd-processadores/
+________________________________________________________________________________________________
+
+https://olhardigital.com.br/noticia/i3-i5-e-i7-entenda-de-uma
+-vez-a-diferenca-entre-os-processadores-da-intel/66293
+
+________________________________________________________________________________________________
+
+Notebook Lenovo Core i3-8130U 4GB 1TB Tela 15.6” Windows 10 Ideapad S145 (R$ 2.899,00)
+
+https://www.pontofrio.com.br/Informatica/Notebook/notebook-lenovo-core-i3-8130u-
+4gb-1tb-tela-15-6-windows-10-ideapad-s145-55004394.html?utm_medium=
+cpc&utm_source=gp_pla&IdSku=55004394&idLojista=16&utm_campaign=
+1p_smart-shopping&gclid=EAIaIQobChMIloW-u5Ko6wIVyopaBR39WwxZEAQYASABEgLDgPD_BwE

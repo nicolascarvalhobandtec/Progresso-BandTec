@@ -1,0 +1,52 @@
+
+Intel Core i3-6006u
+
+Número de núcleos = 2
+
+Nº de threads = 4
+
+Frequência baseada em processador = 2.00 GHz
+
+Cache = 3 MB Intel® Smart Cache
+
+Velocidade do barramento = 4 GT/s
+
+TDP = 15 W
+
+Tamanho máximo de memória (de acordo com o tipo de memória) = 32 GB
+
+Tipos de memória = DDR4-2133, LPDDR3-1866, DDR3L-1600
+
+Gráficos do processador ‡ = Gráficos HD Intel® 520
+
+
+
+
+
+
+K - "Unlocked", significa que o processador pode ir além 
+    de sua velocidade pré-determinada através de um overclock;
+
+G - Inclui placa de vídeo integrada (apenas para laptops);
+
+U - "Ultra Low Power", ou baixo consumo de energia (apenas para laptops);
+
+T - "Power-optimized", economiza energia, mas não tanto quanto o modelo U;
+
+H - "High performance graphics", inclui placa de vídeo integrada um pouco 
+     melhor que o modelo G;
+
+Y - "Extremely low power", economiza ainda mais energia do que o modelo U;
+
+Q - "Quad-core", ou simplesmente "quatro núcleos";
+
+M - "Mobile", modelo exclusivo para laptops;
+
+C - Possui opção de overclock, soquete LGA 1150, placa de vídeo integrada básica;
+
+R - Processor de desktop baseado no soquete BGA 1364 com placa de vídeo 
+    integrada avançada;
+
+S - Otimizado para performance;
+
+X - "Extreme Edition", performance melhorada.
