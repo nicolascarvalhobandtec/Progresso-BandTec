@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 14 - Cálculos Básicos </title>
+</head>
+<body>
+    Entre com o primeiro número 
+    <input type="text" id="primeiro_numero">
+    <br>
+    <br>
+    Entre com o segundo número 
+    <input type="text" id="segundo_numero">
+    <br>
+    <br>
+    <button onclick="multiplicar()"> Multiplicar! </button>
+    <button onclick="subtrair()"> Subtrair! </button>
+    <button onclick="dividir()"> Dividir! </button>
+    <button onclick="somar()"> Somar! </button>
+
+
+</body>
+</html>
+
+<script>
+    function multiplicar() {
+        alert ("O primeiro número multiplicado com o segundo é: "
+         + primeiro_numero.value * segundo_numero.value)
+    }
+
+    function subtrair() {
+        alert (`O primeiro número subtraído com o segundo é: 
+        ${primeiro_numero.value - segundo_numero.value}`)
+    }
+
+    function dividir() {
+        alert (`O primeiro número subtraído com o segundo é: 
+        ${primeiro_numero.value / segundo_numero.value}`)
+    }
+
+    function somar() {
+        alert (`O primeiro número subtraído com o segundo é: 
+        ${Number(primeiro_numero.value) + Number(segundo_numero.value)}`)
+    }
+</script>
