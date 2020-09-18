@@ -1,0 +1,19 @@
+
+.bloco {
+    background-color: rgba(146, 215, 255, 0.377);
+    padding: 40px;
+    margin-top: 35px;
+    padding-left: 5px;
+    border: 1px solid rgb(217, 219, 78);
+    border-radius: 10px;
+    width: 40vw;
+    height: 360px;
+}
+
+.inps input {
+
+}
+
+.refer {
+
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica 05 (||)</title>
+</head>
+<body>
+    <h2> Calculadora de Cansaço do Aluno BandTec </h2>
+
+    Meio de transporte: <select id="aluno" onchange="calcular()"> 
+    <option value="1">Ônibus</option>
+    <option value="2">Metrô</option>
+    <option value="3">Carro</option>
+    <option value="4">Bicicleta</option>
+    <option value="5">Lotação</option>
+</select>
+
+    <button onclick="calcular()"> Calcular cansaço </button>
+</body>
+</html>
+
+<script> function calcular() {
+
+    var cansaco_aluno = Number (aluno.value); 
+
+    if (cansaco_aluno == 3 || cansaco_aluno == 4) {
+        alert (`Tá tranquilo! :D `);
+    } 
+    if (cansaco_aluno == 2) {
+        alert (`Vai cansar algum dia`);
+    }
+    if (cansaco_aluno == 5 || cansaco_aluno == 1) {
+        alert (`Um sobrevivente. Vive sempre cansado`);
+    }
+}
+</script>

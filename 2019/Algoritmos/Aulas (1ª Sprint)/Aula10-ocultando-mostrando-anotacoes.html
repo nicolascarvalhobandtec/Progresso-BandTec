@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<!--                    `` ANOTAÇÕES (aula10-ocultando-mostrando.html) ´´                         -->
+
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Anotações (Mudando o corpo da página) </title>
+</head>
+<body>
+    <h2>Alterando e exibindo o corpo da página em várias partes</h2>
+
+    Quanto como por dia? <br>
+    Em proteínas? <input id="proteinas"> <br>
+    Em carboidratos? <input id="carboidratos"> <br>
+    Em frutas/legumes? <input id="frutas_legumes"> <br>    
+    
+    <button onclick="magica()">Faça Mágica!</button>
+
+    <div id="div_mensagem" style="display: none">
+        Diariamente você come: <ul>
+            <li style="color: brown" id="u_proteinas">? proteínas</li>
+            <li style="color: blue" id="li_carboidratos">? carboidratos</li>
+            <li style="color:green" id="li_frutas_legumes">? frutas/legumes</li>
+        </ul>
+    </div>
+
+</body>
+</html>
+
+<script>
+    function magica() {
+        u_proteinas.innerHTML = proteinas.value;
+        li_carboidratos.innerHTML = `${carboidratos.value} carboidratos`;
+        li_frutas_legumes.innerHTML = `${frutas_legumes.value} frutas/legumes`;
+
+        // tornando a 'div_mensagem' visível
+        div_mensagem.style.display = 'block';
+    }
+</script>
+

@@ -1,0 +1,98 @@
+
+.hub {
+    background-color: rgba(255, 255, 255, 0.829);
+    border-radius: 15px;
+    border: 5px darkolivegreen solid;
+    height: 2000px;
+    width: 1100px;
+    margin: auto;
+}
+
+.navi {
+    background-color: rgb(119, 62, 21);
+}
+.navi h1 {
+    text-decoration-color: rgb(0, 166, 231);
+}
+.navi h3 {
+    text-decoration-color: rgb(0, 166, 231);
+}
+.navi p {
+    text-decoration-color: rgb(0, 166, 231);
+}
+
+.image {
+background-image: url("../img/summoner.jpg");
+width: 531px;
+height: 380px;
+border-radius: 2px;
+border: 3px solid rgb(133, 77, 26);
+}
+
+/*
+.campeoes {
+    background-image: url("../img/champ.jpg");
+    border-radius: 1px;
+    border: 1px black solid;
+    width: 915px;
+    height: 720px;
+}
+*/
+
+#img_champs {
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 2px;
+    background-color: darkgray;
+    width: 1000px;
+    height: 1300px;
+}
+
+#illaoi img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 280px;
+    height: 235px;
+    margin-right: 65%;
+    border-radius: 7px;
+    border: 3px solid black;
+}
+
+#nunu img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 280px;
+    height: 235px;
+    margin-right: 65%;
+    border-radius: 7px;
+    border: 3px solid black;
+}
+
+#pantheon img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 280px;
+    height: 235px;
+    margin-right: 65%;
+    border-radius: 7px;
+    border: 3px solid black;
+}
+
+#ashe img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 280px;
+    height: 235px;
+    margin-right: 65%;
+    border-radius: 7px;
+    border: 3px solid black;
+}
+
+#shen img{
+    margin-top: 10px;
+    margin-left: 20px;
+    width: 280px;
+    height: 235px;
+    margin-right: 65%;
+    border-radius: 7px;
+    border: 3px solid black;
+}

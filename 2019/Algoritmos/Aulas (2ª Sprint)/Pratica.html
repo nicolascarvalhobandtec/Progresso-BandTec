@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica 1</title>
+</head>
+<body>
+    Lista de Produtos de Mercearia: 
+        <select id="produto" onchange="ver_produto()">
+        <option>- Produtos da Mercearia - </option>
+        <option value="5,00">Leite Integral</option>
+        <option value="1,50">Tangerina</option>
+        <option value="2,50">Maçã</option>
+        <option value="4,00">Espinafre</option>
+    </select>
+    <button onclick="ver_produto()">Verificar preço</button>
+</body>
+</html>
+
+<script> 
+     function ver_produto() {
+    alert (`Isso custa R$${produto.value} reais.`);
+}
+</script>

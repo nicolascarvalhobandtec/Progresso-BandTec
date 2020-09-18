@@ -1,0 +1,10 @@
+https://computerworld.com.br/2019/01/23/itil-tudo-sobre-a-biblioteca-de-infraestrutura-de-ti/
+
+Trata-se de uma biblioteca de volumes que descreve uma estrutura de melhores práticas para fornecer serviços de TI. 
+O objetivo não era criar um produto proprietário que pudesse ser comercializado, mas sim, reunir as melhores práticas 
+que poderiam ajudar com o que o governo reconheceu ser uma dependência crescente do governo em TI, combinada com uma 
+dolorosa falta de procedimentos padrão que estavam aumentando os custos e permitindo que os erros se perpetuassem. 
+Logo ficou claro que a distribuição dessas melhores práticas beneficiaria organizações públicas e do setor privado.
+A ITIL é uma coleção de e-books, mas a simples execução de maratonar uma leitura não melhorará as operações de TI. 
+Uma organização de TI bem administrada que gerencia riscos e mantém a infraestrutura funcionando não apenas economiza
+dinheiro, mas também permite que os executivos realizem seus trabalhos com mais eficiência.

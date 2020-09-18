@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<!--                    `` ANOTAÇÕES (aula07-javascript1.html) ´´                         -->
+
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Anotações (Primeiro programa em Javascript) </title>
+</head>
+<body>
+    <h2>HTML com Javascript</h2>
+
+    Informe seu nome: <input id="seu_nome"> <br>
+    Informe sua idade: <input id="idade"> <br>
+    <button onclick="contar()">Conte-me algo</button>
+
+</body>
+</html>
+
+<script>
+    // aqui criamos um algoritmo chamado 'contar'
+    // ou seja, criamos uma FUNÇÃO chamada 'contar'
+    // A função contar vao pegar o 'seu_nome' e 'idade'
+    // e exibir eles numa mesma frase
+    function contar() {
+        var seu_nome1 = seu_nome.value;
+        var idade1 = idade.value;
+
+        alert('Olá, o programa está começando!');
+        alert(`Você se chama ${seu_nome1} e tem ${idade1} anos`);
+    }
+</script>
+

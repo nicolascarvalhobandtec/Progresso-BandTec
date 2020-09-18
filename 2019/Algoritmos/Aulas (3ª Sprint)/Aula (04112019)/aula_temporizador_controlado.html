@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Temporizador </title>
+</head>
+<body>
+    <h1> Temporizando um mantra... </h1>
+
+    <input id="inputo" autofocus>
+
+    <div id="div_mantra"></div>
+</body>
+</html>
+
+<script>
+     var limite_ruido = 4;
+     var contador_ruido = 0;
+    function falar_mantra() {
+        div_mantra.innerHTML += 'Umu Bu Gai Fei Di Tal... <br> <br>';
+
+    setTimeout(() => {
+        falar_mantra();
+    }, 2000);
+}
+     function falar_ruido() {
+        div_mantra.innerHTML += 'ENFRENTE SUAS SOMBRAS E RENDA-SE A ELAS! <br> <br>';
+        contador_ruido++;
+        if (contador_ruido <= limite_ruido) {
+            setTimeout(() => {
+            falar_ruido();
+            }, 1500);
+       }
+}
+     function iniciar() {
+         falar_mantra();
+         falar_ruido();
+     }
+     //indicação de função que deve ser executada
+     //quando a página for carregada totalmente pelo navegador
+window.onload = iniciar();
+
+</script>

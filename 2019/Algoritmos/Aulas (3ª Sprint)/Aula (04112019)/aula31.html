@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Aula 31 </title>
+</head>
+<body>
+    <h1> Números Aleatórios </h1>
+
+    <button onclick="sortear()"> 
+        Sortear! </button> <br>
+    <br>
+    <button onclick="sortear_ate_9()"> 
+        Sortear até ! </button> <br>
+    <br>
+    <button onclick="sortear_entre_1_6()"> 
+        Sortear até 1 e 6! </button> <br>
+    <br>
+    <button onclick="sortear_entre_1_50()"> 
+        Sortear até 1 e 50! </button> <br>
+    <br>
+</body>
+</html>
+
+<script>
+    function sortear() {
+        //sempre entre 0 e 0.999... (até antes de 1)
+        var sorteado = Math.randon();
+        alert (sorteado);
+    }
+    function sortear_ate_9() {
+        //sempre 0 e 0.9999... (antes de 10)
+        var sorteado = Math.random()*10;
+        alert (sorteado);
+    }
+    function sortear_entre_1_6() {
+        //sempre entre 1 e 6
+        var sorteado = parseInt(Math.random()*6)+1;
+        alert (sorteado);
+    }
+    function sortear_entre_1_50() {
+        // sempre entre 1 e 50
+        var sorteado = parseInt(ath.random()50*)+1;
+        alert (sorteado);
+    }
+</script>

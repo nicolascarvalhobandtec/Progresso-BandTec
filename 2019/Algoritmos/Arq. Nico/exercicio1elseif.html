@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Exercicio 1  </title>
+</head>
+<body>
+    <h2> Educação Física </h2>
+
+    Informe sua altura: 
+    <input id="altura" onkeyup="medir()"autofocus>
+    <div id="dive"></div>
+</body>
+</html>
+
+<script>
+    function medir() {
+        var valor_altura = Number (altura.value);
+        var resultado;
+
+        if (valor_altura <=1.65) {
+            resultado = "Você pode ser piloto de CORRIDA KOROI!! V U R U U U M ";
+        }
+        else if (valor_altura >1.80) {
+            resultado = "Bó dar uns jump filiao! Bó ser cestiiinha... Fazer uns bloqueio e pá... ";
+        } else {
+            resultado = "vem... VEM PRO FUT VEM, O FUTBOL Ó, TA ESTRALANDO, TA APEGADO! ";
+        }
+
+        dive.innerHTML = "Rapais, ${resultado}";
+    }
+</script>

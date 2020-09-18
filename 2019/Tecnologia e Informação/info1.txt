@@ -1,0 +1,22 @@
+https://blog.deskmanager.com.br/o-que-e-itil/
+
+ITIL é um conjunto de boas práticas para a área de TI. O objetivo, então, era proporcionar um vasto subsídio com modelos 
+e exemplos de cases que obtiveram sucesso em seus processos gerenciais. Essas práticas são tidas como o padrão para o 
+gerenciamento de projetos e atividades em uma equipe de analistas de suporte, por exemplo. Sendo assim, inicialmente, 
+o projeto visava apenas documentar processos e se transformou em algo valioso para empresas de TI ou para aquelas 
+que possuem uma equipe de TI.
+
+
+https://www.projectbuilder.com.br/blog/o-que-e-itil-e-o-como-ele-se-encaixa-na-area-de-ti-da-sua-empresa/
+
+é um conjunto de boas práticas em infraestrutura, operação e manutenção de serviços de TI.
+ A sua aplicação está direcionada para as áreas operacional e tática da empresa.
+
+
+https://www.euax.com.br/2018/10/itil-o-que-e-importancia-como-implantar/
+
+Podemos dizer que o ITIL é um guia que serve como referência para a gestão de serviços de TI e que contém alguns 
+processos e templates. Mas isso não significa que é uma metodologia, já que não contempla todas as minúcias de 
+uma implementação.
+
+

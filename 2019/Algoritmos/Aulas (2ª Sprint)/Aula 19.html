@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Aula 19</title>
+</head>
+<body>
+    Lista suspensa ou "combo box" <select id="frutas" onchange="ver_valor()">
+        <option> - Escolha uma fruta - </option>
+        <option value="1">Abacate</option>
+        <option value="2">Abacaxi</option>
+        <option value="3">Morango</option>
+        <option value="4">Pera</option>
+    </select>
+
+    <button onclick="ver_valor()">Ver valor real</button>
+</body>
+</html>
+
+<script> 
+     function ver_valor() {
+    alert (`Valor real do combo: ${frutas.value}`);
+}
+</script>

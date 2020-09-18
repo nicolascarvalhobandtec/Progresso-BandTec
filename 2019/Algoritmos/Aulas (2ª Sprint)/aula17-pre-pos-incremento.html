@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pré e pós</title>
+</head>
+<body>
+    <h2>Pré e pós aumento e diminuição</h2>
+
+    Idade: <input type="text" id="idade">
+    <br>
+    <button onclick="envelhecer()">Envelhecer 1 ano</button>
+    <button onclick="rejuvenescer()">Rejuvenescer 1 ano</button>
+
+    <br><br><br>
+
+    Aprovações do primo:
+    <input type="text" id="aprovacoes"> <br>
+
+    Namoradas do primo:
+    <input type="text" id="namoradas"> <br>
+
+    <button onclick="ver_inveja()">Ver Inveja</button>
+
+</body>
+</html>
+<script>
+
+    // aumentado o valor digitado na caixa "idade"
+    function envelhecer() {
+        // não é possível usar pré nem pós incremento
+        // junto de uma Number(...)
+
+        // pegando a idade que está na caixa
+        var idade_atual = Number(idade.value);
+
+        // usando pré-incremento para aumentar a idade
+        var nova_idade = ++idade_atual;
+
+        // jogando a nova idade na caixa
+        idade.value = nova_idade;
+    }
+
+
+    // aumentado o valor digitado na caixa "idade"
+    function rejuvenescer() {
+        // não é possível usar pré nem pós incremento
+        // junto de uma Number(...)
+
+        // pegando a idade que está na caixa
+        var idade_atual = Number(idade.value);
+
+        // usando pré-incremento para diminuir a idade
+        var nova_idade = --idade_atual;
+
+        // jogando a nova idade na caixa
+        idade.value = nova_idade;
+    }
+
+    function ver_inveja() {
+        var num_aprovacoes = Number(aprovacoes.value);
+        var num_namoradas = Number(namoradas.value);
+
+        alert(`Jonhy quer ter ${++num_aprovacoes} aprovações porque seu primo teve ${--num_aprovacoes}`);
+
+        alert(`Jonhy quer ter ${++num_namoradas} namoradas porque seu primo teve ${--num_namoradas}`);
+    }
+
+</script>
