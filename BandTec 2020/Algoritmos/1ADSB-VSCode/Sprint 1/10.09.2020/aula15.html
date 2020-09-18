@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Aula 15 - Cálculos Básicos Inner </title>
 </head>
-<body>
+<body style="background-color: lightblue">
+    <h2> O Título ! </h2>
     Entre com o primeiro número 
     <input type="text" id="primeiro_numero">
     <br>
@@ -18,29 +19,29 @@
     <button onclick="subtrair()"> Subtrair! </button>
     <button onclick="dividir()"> Dividir! </button>
     <button onclick="somar()"> Somar! </button>
-    <div id="div_mens"></div>
+    <div id="div_mensagem"> A mensagem tá aqui </div>
 
 </body>
 </html>
 
 <script>
     function multiplicar() {
-    div_mens.innerHTML = "O primeiro número multiplicado com o segundo é: "
+    div_mensagem.innerHTML = "O primeiro número multiplicado com o segundo é: "
      + primeiro_numero.value * segundo_numero.value
 }
 
 function subtrair() {
-    div_mens.innerHTML = `O primeiro número subtraído com o segundo é: 
-    ${primeiro_numero.value - segundo_numero.value}`
+    div_mensagem.innerHTML = `O primeiro número subtraído com o segundo é: 
+    ${primeiro_numero.value - segundo_numero.value}`;
 }
 
 function dividir() {
-    div_mens.innerHTML = `O primeiro número subtraído com o segundo é: 
+    div_mensagem.innerHTML = `O primeiro número subtraído com o segundo é: 
     ${primeiro_numero.value / segundo_numero.value}`
 }
 
 function somar() {
-    div_mens.innerHTML = `O primeiro número subtraído com o segundo é: 
+    div_mensagem.innerHTML = `O primeiro número subtraído com o segundo é: 
     ${Number(primeiro_numero.value) + Number(segundo_numero.value)}`
 }
 </script>

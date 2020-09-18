@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 08  </title>
+</head>
+<body>
+
+    <!-- 
+        Refaça o programa da questão anterior de tal forma que a mensagem do item 
+        b) apareça com uma cor de fundo preta e cor de letra amarela. 
+    -->
+
+    <h2> Saudações coloridas! </h2>
+    <button onclick="alertar()"> Boas-vindas no alerta </button>
+    <button onclick="mostrar()"> Boas-vindas na página </button>
+    <div id="mensagem" style="background-color: black; color: yellow"></div>
+</body>
+</html>
+
+<script>
+    function alertar() {
+        alert (`Boas-vindas, Usuário!`);
+    }
+
+    function mostrar() {
+        mensagem.innerHTML = `Boas-vindas, Usuário!`;
+    }
+</script>

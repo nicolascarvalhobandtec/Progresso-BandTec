@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula14 Cálculos</title>
+</head>
+<body>
+    Entre com o primeiro número: 
+        <input id="pri_num" type="text"> <br><br>
+    Entre com o segundo número: 
+        <input id="seg_num" type="text">
+    <br><br>
+    <button onclick="multiplicar()">Multiplicação</button>
+    <button onclick="subtrair()">Subtração</button>
+    <button onclick="dividir()">Divisão</button>
+    <button onclick="somar()">Soma</button>
+</body>
+</html>
+<script>
+    function multiplicar() {
+        alert ("O primeiro número multiplicado pelo segundo dá: " + pri_num.value * seg_num.value);
+    }
+    function subtrair() {
+        alert (`O primeiro número subtraido do segundo dá: ${pri_num.value - seg_num.value}`);
+    }
+    function dividir() {
+        alert (`O primeiro número dividido pelo segundo dá: ${pri_num.value / seg_num.value}`);
+    }
+    function somar() {
+        /*
+        para SOMAR, temos que, OBRIGATORIAMENTE,
+        converter CADA UM dos campos em número
+        se não fizermos isso, os valores serão concatenados e não somados
+        */
+        alert (`O primeiro número dividido pelo segundo dá: 
+            ${Number(pri_num.value) + Number(seg_num.value)}`);
+    }
+</script>

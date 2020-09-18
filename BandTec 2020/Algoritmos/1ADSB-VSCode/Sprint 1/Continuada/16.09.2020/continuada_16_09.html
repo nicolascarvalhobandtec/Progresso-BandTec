@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Continuada 1 </title>
+</head>
+
+<!-- a-) Tenha pelo menos 2 campos para que o usuário digite valores. 
+     Para quem não sabe, "pelo menos" signifca que pode, sim, ter mais de 2, 
+     caso queira. 
+     Esses campos serão usados para fazer um processo qualquer 
+     (ex: cálculo de IMC - agora não pode mais fazer esse) -->
+
+<!-- b) Tenha um botão que, ao ser clicado, use os valores para realizar 
+     o cálculo necessário. Em seguida deve aparecer um texto abaixo de 
+     tudo informando o resultado do processo. Esse texto deve ter cores 
+     diferentes em diferentes partes do texto na própria página 
+     (ou seja, NÃO é um alert). 
+     Use sua criatividade para colorir de tal forma que fique legal seu programa -->
+
+<body style="background-color: gray">
+    <div id="div1" style="height: 100px; width: 100%"></div>
+    <div id="div2" style="height: 100px; width: 100%"></div>
+    <div style="width: 60%; height: 60%;">
+        <div id="calculador" style="height: 100%; float: right; color: white; background-color: black">
+            <h2 style="color: white"> Programa Calculador de MMC </h2>
+            Digite o valor 1: <input id="n1" type="text">
+            <br>
+            <br>
+            Digite o valor 2: <input id="n2" type="text">
+            <br>
+            <br>
+            <button onclick="calcular()"> Calcular! </button>
+            <br>
+            <div id="mensagem" style="color:darkred"> </div>
+        </div>
+</body>
+
+</html>
+
+<script>
+    function calcular() {
+        var resultado = Number(n1.value) * Number(n2.value);
+
+        mensagem.innerHTML = `O <b style="color: goldenrod">resultado </b> é: 
+        <b style="color: lightskyblue"> ${resultado} </b>`;
+    }
+</script>

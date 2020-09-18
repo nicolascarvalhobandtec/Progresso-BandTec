@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula10</title>
+</head>
+<body>
+    <h2>Cardapio Semanal</h2>
+    <h3>Decubra o prato do dia</h3> 
+    <button onclick="segunda()">Segunda</button>
+    <button onclick="terca()">Terça</button>
+    <button onclick="quarta()">Quarta</button>
+    <button onclick="quinta()">Quinta</button>
+    <button onclick="sexta()">Sexta</button>
+    <br><br>
+<!-- 
+    A div abaixo tem um id. Esse id é o identificador da div
+    Assim, podemos manipular o corpo dessa tab (div) pelo Javascript 
+    na tag <script>
+-->
+    <div id="div_msg">Adivinha qual é o prato de hoje</div>
+
+<!-- 
+    Regras para valor de id: 
+    1. todas as letras devem ser minúsculas
+    2. não começar com número 
+    3. pode ter número no meio ou fim
+    4. a cada "palavra", usar "_" (underline)
+       ex: telefone_comercial, quantidade_filhos
+    5. NÃO pode ter espaço em branco
+    6. NÃO usar nomes de tags (body, h3, img, div etc)
+    7. NÃO usar caracteres especiais (acentos, cedilha, etc)
+-->
+</body>
+</html>
+<script>
+    function segunda() {
+        div_msg.innerHTML = "Hoje é dia  de rabada"; 
+    }
+
+    // "div_msg" é o id de uma tag do nosso HTML, neste caso da tag div criada para exibir as mensagens
+    // "innerHTML" é o CORPO de uma tag.
+    // se usamos = após ele (div_msg.innerHTML), alteramos o corpo dessa tag
+
+    function terca() {
+        div_msg.innerHTML = "Hoje é dia de bife a role";
+    }
+    function quarta() {
+        div_msg.innerHTML = "Hoje é dia de feijoada";
+    }
+    function quinta() {
+        div_msg.innerHTML = "Hoje é dia de macarronada";
+    }
+    function sexta() {
+        div_msg.innerHTML = "Hoje é dia de peixe";
+    }
+</script>
