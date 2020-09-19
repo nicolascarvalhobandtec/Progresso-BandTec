@@ -1,0 +1,24 @@
+
+.noinp {
+    background-color: rgba(221, 233, 255, 0.623);
+    padding: 5px;
+    margin-top: 25px;
+    padding-left: 5px;
+    border: 2px solid rgb(47, 143, 252);
+    border-radius: 20px;
+    width: 32vw;
+}
+
+.inp input {
+    width: 25vw;
+    padding: 5px;
+    margin-top: 25px;
+    border: 2px solid lightslategray;
+    border-radius: 10px;
+}
+
+.binp  {
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+}

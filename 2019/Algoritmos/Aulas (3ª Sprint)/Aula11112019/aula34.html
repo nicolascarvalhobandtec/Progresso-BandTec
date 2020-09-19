@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Aula 34 - Iterando em Vetores </title>
+</head>
+<body>
+    <h1> Iterando em Vetores </h1>
+
+    Informe um filme que já assistiu <input id="filme" autofocus> <br>
+    <br>
+    <button onclick="cadastrar()"> Cadastrar </button>
+    
+    <div id="div_filmes"></div>
+</body>
+</html>
+
+<script>
+    // vetor vazio
+    var filmes = [];
+
+    function cadastrar() {
+        // inserindo elementos num vetor com push()
+        filmes.push(filme.value);
+
+        //exibindo o vetor numa div
+        div_filmes.innerHTML = `Cadastrados: ${filmes.length} <br>`;
+
+        // iterando no vetor com for
+
+        for (var indice = 0; indice < filmes.length; indice++) {
+            div_filmes.innerHTML += `${filmes[indice]} <br>`;
+        }
+    }
+</script>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica 01 (||)</title>
+</head>
+<body>
+    <h2>Urna de Eleições</h2>
+
+    Sua idade: <input id="idade" autofocus> 
+    <br>
+    <button onclick="averiguar()"> Votação </button>
+</body>
+</html>
+
+<script> function averiguar() {
+    var idade_voto = Number (idade.value);
+
+    if (idade_voto <18 || idade_voto >65) {
+        alert (`Seu voto é opcional`);
+    } else {
+        alert (`Você é obrigado(a) a votar!`);
+    }
+}
+</script>

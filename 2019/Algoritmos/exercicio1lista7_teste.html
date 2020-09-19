@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Lista 7 - Exercicio 1</title>
+</head>
+<body>
+    
+    <h2> Festa na casa do Paulo! </h2>
+
+    Qual sua Idade ? <input type="text" id="idade">
+    <br>
+    <button onclick="festejar()"> Ir pra Festa! </button>
+    <div id="festao"></div>
+
+</body>
+</html>
+<script>
+
+function festejar() {
+    festao.innerHTML = "";
+    var valor_idade = Number(idade.value);
+    var mensagem = "#partiufesta";
+    var mensagem = valor_idade >= 18 ? "#partiufesta" : valor_idade < 15? "Sem chance! Vai estudar" : "Pedir permissao pra responsavel";
+    alert (mensagem);
+    festao.innerHTML = mensagem;
+}
+</script>

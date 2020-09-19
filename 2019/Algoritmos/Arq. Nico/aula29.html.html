@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Estruturas de Repetição (for) </title>
+</head>
+<body>
+    <h2> Estruturas de Repetição </h2>
+
+    <button onclick="repetir_alerts()"> Repetir alerts</button>
+    <br>
+    <button onclick="repetir_html()"> Repetir na página </button>
+    <br>
+    <button onclick="repetir_imagens()"> Repetir imagens </button>
+
+    <div id="div_frases"></div>
+    <div id="div_imagens"></div>
+</body>
+</html>
+
+<script>
+    function repetir_alerts() {
+        for (var contador = 0; contador <5; contador++) {
+            alert ('Algoritmos é  H A R D C O R E !');
+        }
+        /*var contador = 0;
+
+        while (contador <5) {
+            alert ('Algoritmos é  H A R D C O R E');
+            contador++;
+        }*/
+    }
+
+    function repetir_html() {
+        div_frases.innerHTML = '';
+
+        for (var contador = 0; contador <5; contador++) {
+            div_frases.innerHTML += 'Algoritmos é  H A R D C O R E !<br>';
+        }
+        
+        /*var contador = 0;
+
+        while (contador <5) {
+            div_frases.innerHTML += 'Algoritmos é  H A R D C O R E !<br>');
+            contador++;
+        } */
+    }
+
+    function repetir_imagens() {
+        for (var contador = 0; contador <5; contador++) {
+            div_imagens.innerHTML += '<img src="pesado.png">';
+        }
+    }
+</script>

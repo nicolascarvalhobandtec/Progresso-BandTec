@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Menu - LoL Build Maker  </title>
+    <link rel="stylesheet" href="./menu.css">
+
+</head>
+<body background="logo.jpg">
+<center>
+    <embed src="early_game.mp3" hidden="true" loop="infinite" autostart="TRUE">
+    <h1 style="color: rgb(248, 248, 144)"> Olá, Invocador! </h1>
+    <div class="hub module-border-wrap">
+    <h3 style="color: lightyellow"> Está preparado para montar sua própria linhagem de itens <br> e arrebentar no seu jogo? Esperamos que sim! </h3> <br>
+    <br>
+ 
+    <span style="color: rgb(255, 255, 130)"> Antes de começarmos, diga-nos: aonde gostaria de jogar? <select id="lane" onchange="trocar()">
+        <option value="ramdom"> Selecione sua Lane </option>
+        <option value="TOP"> Top (Topo) </option>
+        <option value="JUNGLE"> Jungle (Selva) </option>
+        <option value="MID"> Mid (Meio) </option>
+        <option value="BOT"> Bot (Atirador) </option>
+        <option value="SUP"> Sup (Suporte) </option>
+    </select> </span>   
+    <br> <br>
+    <div class="image"> <span style="color: whitesmoke"> Summoner's Rift </span></div> <br>
+     <br>
+    <span style="color: rgb(0, 201, 167)"> Ahh... Então se pretende atuar como... <span id="area" style="color: greenyellow"></span>,
+    com certeza você vai querer escolher seu campeão, certo?
+</span> <br> <br> 
+
+    <div class="campeoes"> <br>
+    <span style="color: lightgoldenrodyellow"> Agora escolha seu campeão e veja algumas informações sobre ele <select id="champ" onchange="escolher()">
+        <option value="ILLAOI"> Illaoi </option>
+        <option value="NUNU"> Nunu & Willump </option>
+        <option value="PANTHEON"> Pantheon </option>
+        <option value="GALIO"> Galio </option>
+        <option value="ASHE"> Ashe </option>
+</select></span></div>
+</div>
+</center>
+</body>
+</html>
+
+<script>
+    function trocar() {
+        area.innerHTML = `${lane.value}`;
+    }
+</script>

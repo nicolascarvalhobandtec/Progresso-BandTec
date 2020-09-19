@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica 04 (||)</title>
+</head>
+<body>
+    <h2> Temperaturas Confortáveis </h2>
+
+    Temperatura atual: <input id="temperatura" autofocus> 
+    <br>
+    <button onclick="clima()"> Analisar clima </button>
+</body>
+</html>
+
+<script> function clima() {
+
+    var temperatura_atual = Number (temperatura.value); 
+
+    if (temperatura_atual <20) {
+        alert (`ALERTA DE DESCONFORTO!`);
+        alert (`As pessoas podem ter HIPOTERMIA! :¨{`);
+    } else {
+        alert (`As pessoas vão derreter! :O`);
+    }
+    if (temperatura_atual >=21 || temperatura_atual <=24) {
+        ;
+    }
+}
+</script>

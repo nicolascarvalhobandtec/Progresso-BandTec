@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>IF-ELSE (SE - SENÃO)</title>
+</head>
+<body>
+    <H2>IF-ELSE (SE - SENÃO)</H2>
+
+    Sua idade: <input id="idade">
+
+    <br><button onclick="maioriade()">Ver Maioridade</button>
+
+</body>
+</html>
+<script>
+
+function maioriade() {
+    var valor_idade = Number(idade.value);
+
+    // "if" normal
+    if (valor_idade >= 18) {
+        alert('Você é maior de idade!');
+    } else { 
+        // o bloco "else" é executado 
+        // CASO o teste lógico do "if" seja falso
+        alert('Você é MENOR de idade :(');
+    }
+}
+
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temporizadores controlados</title>
+</head>
+<body>
+    <h2>Temporizadores controlados</h2>
+
+    <h3>Temporizando um mantra...</h3>
+
+    <input type="text" id="frase"> <br>
+
+    <div id="div_mantra"></div>
+</body>
+</html>
+<script>
+
+    var limite_ruidos = 4;
+    var contador_ruidos = 0;
+
+    function falar_mantra() {
+        div_mantra.innerHTML += 'mantra <br>';
+
+        setTimeout(() => {
+            falar_mantra();    
+        }, 2000);
+    }
+
+    function falar_ruido() {
+        div_mantra.innerHTML += 'ruído! <br>';
+        contador_ruidos++;
+
+        if (contador_ruidos < limite_ruidos) {
+            setTimeout(() => {
+                falar_ruido();    
+            }, 1000);
+        }
+    }
+
+    function iniciar() {
+        falar_mantra();
+        falar_ruido();
+    }
+
+    // indicação da função que deve ser executada 
+    // quando a página for carregada totalmente pelo navegador
+    window.onload = iniciar();
+
+</script>

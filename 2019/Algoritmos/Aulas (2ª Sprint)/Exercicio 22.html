@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Times de São Paulo</title>
+</head>
+<body>
+    Os Escudos dos Grande Times de São Paulo <select id="escudo">
+    <option value="SaoPaulo.png"> São Paulo </option>
+    <option value="curintia.jpg"> Corinthians </option>
+    <option value="palmeira.png"> Palmeiras </option>
+    <option value="santos.png"> Santos </option>
+    </select>
+
+    <button onclick="ver_escudo()">Ver Escudo</button> <br>
+    <img src="" id="imagem">
+</body>
+<script> function ver_escudo() {
+    imagem.src = escudo.value;
+}
+</script>

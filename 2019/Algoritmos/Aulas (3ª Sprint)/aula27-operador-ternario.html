@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Operador ternário</title>
+</head>
+<body>
+    <h2>Operador ternário</h2>
+    Digite sua idade: <input type="text" id="idade_valor">
+    <button onclick="calcularIdade()" >Calcular</button>
+    <div id="maioridade"></div>
+</body>
+</html>
+<script>
+
+    function calcularIdade(){
+        maioridade.innerHTML = "";
+        var idade = Number(idade_valor.value);
+        var mensagem = idade >= 18 ? "Você é maior idade!" : "Você é menor de idade!";
+        maioridade.innerHTML = mensagem;
+    }   
+
+</script>

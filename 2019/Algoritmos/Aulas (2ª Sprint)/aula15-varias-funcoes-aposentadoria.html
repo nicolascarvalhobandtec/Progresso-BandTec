@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Várias funções</title>
+</head>
+<body>
+    <h2>Um programa, várias funções</h2>
+
+    Qual sua idade? <input id="idade">
+    <br>
+    <button onclick="homem()">Aposentadoria Homem</button>
+    <button onclick="mulher()">Aposentadoria Mulher</button>
+
+</body>
+</html>
+
+<script>
+    function homem() {
+        var tempo = 70 - Number(idade.value);
+        alert(`Faltam ${tempo} anos p/ o homem se aposentar`);
+    }
+
+    function mulher() {
+        var tempo = 60 - Number(idade.value);
+        alert(`Faltam ${tempo} anos p/ a mulher se aposentar`);        
+    }
+</script>
+

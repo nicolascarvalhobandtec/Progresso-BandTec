@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Exercicio 1 </title>
+</head>
+<body>
+    <h1> Viagem </h1>
+
+    Destino de viagem: <input id="viagem" autofocus>
+    <button onclick="planejar()"> Adicionar </button> <br>
+    <br> <br>
+    <button onclick="viajar1()"> Primeira viagem </button> <br>
+    <br>
+    <button onclick="viajar3()"> Terceira viagem </button> <br>
+    <br>
+    <button onclick="viajarporultimo()"> Última viagem </button> <br>
+    <br>
+    <div id="div_resultado"></div>
+</body>
+</html>
+
+<script>
+    var destinos = [];
+
+    function planejar() {
+        destinos.push(viagem.value);
+    }
+
+    function viajar1() {
+        var resultado;
+        if (destinos.length == 0) {
+            resultado = 'Ainda não viajou';
+        } else {
+            resultado = destinos[0];
+        }
+        div_resultado.innerHTML = resultado;
+    }
+
+    function viajar3() {
+        var resultado;
+        if (destinos.length < 3) {
+            resultado = 'Ainda não fez a 3ª viagem';
+        } else {
+            resultado = destinos[2];
+        }
+        div_resultado.innerHTML = resultado;
+    }
+    function viajarporultimo() {
+        var resultado;
+        if (destinos.length == 0 ) {
+            resultado = 'Ainda não fez a ultima viagem';
+        } else {
+            resultado = destinos[destinos.length-1];
+        }
+        div_resultado.innerHTML = resultado;
+    }
+</script>

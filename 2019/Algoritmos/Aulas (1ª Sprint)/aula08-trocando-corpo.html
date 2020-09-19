@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mudando o corpo da página</title>
+</head>
+<body>
+    <h2>Alterando o corpo da página</h2>
+
+    Informe seu nome: <input id="seu_nome"> <br>
+    Informe sua cidade natal: <input id="cidade_natal"> <br>
+    
+    <button onclick="magica()">Faça Mágica!</button>
+
+    <div id="div_mensagem" style="color: blue"></div>
+
+</body>
+</html>
+
+<script>
+    function magica() {
+        // alterando o 'innerHTML' da tag de id 'div_mensagem'
+        // ou seja, alterando o seu CORPO
+        div_mensagem.innerHTML = `Seu nome é <b>${seu_nome.value}</b> e nasceu em ${cidade_natal.value}`;
+    }
+</script>
+

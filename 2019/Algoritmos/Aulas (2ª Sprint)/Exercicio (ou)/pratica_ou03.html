@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pratica 03 (||)</title>
+</head>
+<body>
+    <h2> Mentes Brilhantes </h2>
+
+    Nota do ENEM: <input id="nota" autofocus> 
+    <br>
+
+    <button onclick="calcular()"> Avaliação </button>
+</body>
+</html>
+
+<script> function calcular() {
+
+    var nota_enem = Number (nota.value); 
+
+    if (nota_enem >=700 || nota_enem >800 ) {
+        alert (`Parabéns, você foi APROVADO!! :D`);
+    } else {
+        alert (`Lamento... Tente semestre que vem`);
+    }
+}
+</script>

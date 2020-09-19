@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Exercicio 2 </title>
+</head>
+<body>
+    <h2> Lista 7 Exercicio 2 </h2>
+
+    Coloque sua média aqui: <input type="text" id="media" autofocus>
+    <br>
+    Qual sua frequência nas aulas? <input type="text" id="aula"> <br>
+    <br>
+    <button onclick="calcular()"> Ver Resultado </button>
+    <div id="aluno"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        aluno.innerHTML = "";
+        var nota_media = Number (media.value);
+        var frequencia_aula = Number (aula.value);
+        var mensagem = nota_media >=5 && frequencia_aula >=75 ? "Parabéns, você foi APROVADO(A) :D" : "Parabéns, tente outra vez :D";
+        aluno.innerHTML = mensagem;
+    }
+</script>

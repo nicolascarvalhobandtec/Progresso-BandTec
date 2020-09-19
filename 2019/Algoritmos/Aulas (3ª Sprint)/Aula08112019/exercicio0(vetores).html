@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Exercicio 0 </title>
+</head>
+<body>
+    <h1> Lista de frutas </h1>
+
+    Digite o nome de sua fruta: <input id="fruta" autofocus>
+    <button onclick="ver_fruta()"> Pesquisar </button>
+
+    <div id="olhafruta"></div>
+</body>
+</html>
+
+<script>
+    var lista_frutas = ['Maçã', 'Laranja', 'Banana', 'Tangerina', 'Abacaxi', 'Uva Verde', 'Tomate'];
+    
+    function ver_fruta() {
+        var lista = 0;
+
+        for (var indice == 0; indice < frutas.length; indice++) {
+            if (fruta.value == frutas[indice]) {
+            achei++
+        }
+    }
+    var resultado;
+    if (achei >= 1) {
+        resultado = `A fruta ${fruta.value} existe na lista`;
+    } else {
+        resultado = `Não existe a fruta ${fruta.value} na lista`;
+    }
+
+    ver_fruta.innerHTML = resultado;
+    }
+</script>
