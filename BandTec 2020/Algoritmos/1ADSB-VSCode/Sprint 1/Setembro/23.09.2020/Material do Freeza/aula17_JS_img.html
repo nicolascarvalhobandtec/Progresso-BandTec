@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula17_img_JS</title>
+</head>
+<body>
+    <h2>Cardapio Semanal</h2>
+    <h3>Decubra o prato do dia</h3> 
+    <button onclick="segunda()">Segunda</button>
+    <button onclick="terca()">Terça</button>
+    <button onclick="quarta()">Quarta</button>
+    <button onclick="quinta()">Quinta</button>
+    <button onclick="sexta()">Sexta</button>
+    <br><br>
+    <div id="div_msg">Adivinha qual é o prato de hoje</div>
+    <br><br>
+    <img id="img_prato" src="" alt="">
+
+</body>
+</html>
+<script>
+    // no JS podemos alterar a fonte da imagem e demais atributos da tab img
+    function segunda() {
+        div_msg.innerHTML = "<br>hoje é dia  de <b> rabada </b>"; 
+        img_prato.src = "imagens/rabada.jpg";
+    }
+    function terca() {
+        div_msg.innerHTML = "<br>hoje é dia de <i>bife a role</i>";
+        img_prato.src = "imagens/bife_role.jpg";
+    }
+    // no JS podemos alterar o estilo das tags
+    function quarta() {
+        div_msg.innerHTML = `<br>hoje é dia de <u style = "background-color:brown">feijoada</u>`;
+        img_prato.src = "imagens/feijoada.jpg";
+    }
+    function quinta() {
+        div_msg.innerHTML = `<br>hoje é dia de <i><u style = "color:red;">macarronada</u></i>`;
+        img_prato.src = "imagens/macarronada.jpg";
+    }
+    function sexta() {
+        div_msg.innerHTML = "<br>hoje é dia de peixe";
+        img_prato.src = "imagens/peixe.jpg";
+    }
+</script>

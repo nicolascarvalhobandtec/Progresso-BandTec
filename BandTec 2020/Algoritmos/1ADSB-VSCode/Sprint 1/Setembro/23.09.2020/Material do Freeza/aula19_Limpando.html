@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula19_Limpando</title>
+</head>
+<body style="background: cadetblue;">
+<h3>Limpando Texto</h3>
+<b id="b_pri" >Ninguem pode</b> viver sem um grande amor <br>
+<b id="b_seg" >Ninguem pode</b> viver sem um bom game <br><br>
+Isso sim é <span id="span_texto" >felicidade</span> 
+<br><br>
+<button onclick="limpar()">Limpar</button>
+</body>
+</html>
+<script>
+    function limpar() {
+        // se usar um par de aspas simples ou dupla, sem nada detro, o corpo da tab some da página
+        b_pri.innerHTML = "";
+        b_seg.innerHTML = "";
+        // no JS é possivel alterar o corpo da tag e seus atributos
+        span_texto.innerHTML = "<b>TRISTEZA</b>";      
+    }
+
+</script>

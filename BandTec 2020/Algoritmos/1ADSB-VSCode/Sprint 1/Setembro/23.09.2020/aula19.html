@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 19 - Limpando Texto </title>
+</head>
+
+<body>
+    <h3>
+        Limpando Texto
+    </h3>
+    <br>
+    <b id="b_pri"> Ninguém pode </b> VIVER sem um grande amor
+    <br>
+    <b id="b_seg"> Ninguém pode </b> VIVER sem um bom game
+    <br>
+    Isso sim é <span id="texto_span"> felicidade </span>
+    <br>
+    <br>
+    <button onclick="limpar()"> Limpar! </button>
+</body>
+
+</html>
+
+<script>
+    // se usar um par de aspas simples ou duplas, sem nada dentro, o corpo tag some da página.
+    function limpar() {
+        b_pri.innerHTML = "";
+        b_seg.innerHTML = "";
+        texto_span.innerHTML = "Tristeza";
+    }
+</script>

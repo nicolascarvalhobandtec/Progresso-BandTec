@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 id="h3_texto">Trevas</h3>
+    <br>
+    <button id="but_acender" onclick="acender()" style="display: block;">Acender</button>
+    <button id="but_apagar" onclick="apagar()" style="display: none;">Apagar</button>
+    <br><br>
+    <img id="img_acesa" src="imagens/luz_acesa.jpg" style="display: none;">
+    <img id="img_apagada" src="imagens/luz_apagada.jpg" style="display: block;">   
+</body>
+</html>
+<script>
+    // style.display manipula a visualização do elemento, sendo que:
+    //    - o valor "block" faz o elemento ficar visível
+    //    - o valor "none" faz o elemento ficar invisivel.
+
+    function acender() {
+        img_apagada.style = "display: none";
+        img_acesa.style = "display: block";
+        but_acender.style = "display: none";
+        but_apagar.style = "display: block";
+        h3_texto.innerHTML = "Há uma luz no fim do túnel";
+    }
+    function apagar() {
+        img_acesa.style = "display: none"; 
+        img_apagada.style = "display: block";
+        but_acender.style = "display: block";
+        but_apagar.style = "display: none";
+        h3_texto.innerHTML = "Trevas";
+    }
+
+</script>

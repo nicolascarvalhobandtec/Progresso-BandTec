@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 24 - Varável Global </title>
+</head>
+<body>
+    Você já clicou <b id="zero"> 0 </b> vezes.
+    <button onclick="clicar()"> Clique Aqui! </button>
+    <button onclick="atualizar()"> Atualizar o Contador! </button> 
+</body>
+</html>
+
+<script>
+    var vezes = 0;
+
+    function clicar() {
+        vezes ++;
+    }
+
+    function atualizar() {
+        zero.innerHTML = vezes;
+    }
+</script>

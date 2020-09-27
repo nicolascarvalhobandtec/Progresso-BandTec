@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 20 -  </title>
+</head>
+<body>
+    <h3 id="h3_texto">
+        A batalha a luz e a escuridão continua.
+    </h3>
+    <button id="botao_acender" onclick="acender()" style="display: block"> 
+        Acenda! 
+    </button>
+
+    <button id="botao_apagar" onclick="apagar()" style="display: none">
+        Apague! 
+    </button>
+    
+    <br>
+
+    <br>
+
+    <img id="img_acesa" src="img_aula20/lamp_acesa.jpg" alt="" style="width: 200px; display: none">
+
+    <img id="img_apagada" src="img_aula20/lamp_apagada.jpg" alt="" style="width: 200px; display: block">
+
+</body>
+</html>
+
+<script>
+    function acender() {
+        img_apagada.style = "display: none";
+
+        img_acesa.style = "display: block";
+
+        botao_acender.style = "display: block";
+                
+        botao_apagar.style = "display: none";
+
+        h3_texto.innerHTML = "A luz divina caíra sobre você!";
+    }
+
+    function apagar() {
+        img_acesa.style = "display: none";
+        
+        img_apagada.style = "display: block";
+                
+        botao_acender.style = "display: block";
+
+        botao_apagar.style = "display: none";
+
+        h3_texto.innerHTML = "As Trevas estão chegando...";
+    }
+</script>

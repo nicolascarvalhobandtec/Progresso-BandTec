@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 21 - Combo Listagem </title>
+</head>
+<body>
+    <h3>
+        Som dos Bichos
+    </h3>
+    <!-- 
+        a TAG <select> nada mais é do que um componente "combo box" ou "lista suspensa"
+     -->
+
+     
+     <select id="bicho" onchange="som()">
+         <option value="Escolha um Bicho"> - Escolha - </option>
+         <option value="Miau!"> Gatos </option>
+         <option value="Ralf!"> Cachorros </option>
+         <option value="Piu!"> Pintinho </option>
+     </select>
+     <button onclick="som()"> Qual é o Som? </button>
+     <br>
+     <br>
+     <div id="mensagem"> Qual o som do Bicho? </div>
+</body>
+</html>
+
+<script>
+    function som() {
+    // o value do select é o "value" da option que estiver selecionada
+        // alert (bicho.value);
+
+        mensagem.innerHTML = `${bicho.value}`;
+    }
+</script>

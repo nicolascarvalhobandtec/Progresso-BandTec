@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 16 - Variável </title>
+</head>
+<body>
+    <h3> Cálculo da Média </h3>
+    Entre com a primeira nota <input type="text" id="nota1">
+<br>
+    Entre com a segunda nota <input type="text" id="nota2">
+<br>
+<br>
+    <button onclick="calcular()"> Calcular </button>
+    <button onclick="ponderar()"> Média Ponderada </button>    
+<br>
+<br>
+    <div id="div_mens"> Média Calculada </div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var media = (Number(nota1.value) + Number(nota2.value)) / 2;
+
+        div_mens.innerHTML = `A média da primeira nota que é ${nota1.value} 
+        com a segunda nota que é ${nota2.value} dá: ${media}`;
+
+        div_mens.innerHTML += `<br>Com a média de ${media}. Você está aprovado(a)`
+    }
+    function ponderar() {
+        div_mens.innerHTML += `<br>O valor da primeira nota é ${nota1.value}`;
+    }
+</script>

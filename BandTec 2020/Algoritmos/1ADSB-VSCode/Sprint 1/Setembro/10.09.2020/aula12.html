@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 12 - Input </title>
+</head>
+<body>
+    Enter com o seu <b> primeiro nome </b> : 
+    <input id ="primeiro_nome" type="text" placeholder="Entre com seu primeiro nome">
+    
+    <br>
+    
+    Enter com o seu <b> último nome </b>: 
+    <input type="text" id="ultimo_nome" placeholder="Entre com seu ultimo nome">
+    
+    <br>
+    
+    <button onclick="mostrar()" style="background-color: green; color: yellowgreen"> 
+        Clique Aqui 
+    </button>
+</body>
+</html>
+
+<script>
+    function mostrar() {
+        alert ("Olá, " + primeiro_nome.value + " " + ultimo_nome.value);
+    }
+</script>

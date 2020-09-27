@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 23 - Atalha Matemático </title>
+</head>
+<body>
+    <h3>
+        Atalhos Matemáticos
+    </h3>
+
+    <input type="text" id="salario" placeholder="Digite o seu salário">
+    <br>
+    <br>
+    <button onclick="potencia()"> Potencia 2 </button>
+    <button onclick="aumentar()"> Aumentar 1 </button>
+    <button onclick="diminuir()"> Diminuir 3 </button>
+    <button onclick="multiplicar()"> Multiplicar 5 </button>
+    <button onclick="dividir()"> Dividir 5 </button>
+    <button onclick="soma_simples()"> Somar somente 1 </button>
+    <button onclick="subtrai_simples()"> Subtrair somente 1 </button>
+
+</body>
+</html>
+
+<script>
+    function potencia() {
+        var resultado_potencia = Number(salario.value) ** 2;
+        alert (resultado_potencia);
+    }
+
+    function aumentar() {
+        var resultado = Number(salario.value);
+        resultado += 1;
+        alert (resultado)
+    }
+
+    function diminuir() {
+        var resultado = Number(salario.value);
+        resultado -= 3;
+        alert (resultado)
+    }
+
+    function multiplicar() {
+        var resultado = Number(salario.value);
+        resultado *= 5;
+        alert (resultado)
+    }
+    
+    function dividir() {
+        var resultado = Number(salario.value);
+        resultado /= 5;
+        // resultado = resultado / 5
+        alert (resultado)
+    }
+
+    function soma_simples() {
+        var resultado = Number(salario.value);
+        resultado ++;
+        alert (resultado);
+    }
+
+    function subtrai_simples() {
+        var resultado = Number(salario.value);
+        resultado --;
+        alert (resultado)
+    }
+</script>

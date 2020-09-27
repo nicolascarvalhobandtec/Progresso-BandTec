@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula18_estilos_JS</title>
+</head>
+<body>
+    <h2>Cardapio Semanal</h2>
+    <h3>Decubra o prato do dia</h3> 
+    <button onclick="segunda()">Segunda</button>
+    <button onclick="terca()">Terça</button>
+    <button onclick="quarta()">Quarta</button>
+    <button onclick="quinta()">Quinta</button>
+    <button onclick="sexta()">Sexta</button>
+    <br><br>
+    <div id="div_msg">Adivinha qual é o prato de hoje</div>
+    <br><br>
+    <img id="img_prato" src="" alt="" style="height: 100px;">
+
+</body>
+</html>
+<script>
+    // no JS podemos alterar os atributos das tags 
+    function segunda() {
+        div_msg.innerHTML = "<br>hoje é dia  de <b> rabada </b>"; 
+        img_prato.src = "imagens/rabada.jpg";
+        img_prato.style = "height: 200px";
+    }
+    function terca() {
+        div_msg.innerHTML = "<br>hoje é dia de <i>bife a role</i>";
+        img_prato.src = "imagens/bife_role.jpg";
+        img_prato.style = "height: 100px";
+    }
+    function quarta() {
+        div_msg.innerHTML = "<br>hoje é dia de <u>feijoada</u>";
+        img_prato.src = "imagens/feijoada.jpg";
+        img_prato.style = "height: 200px";
+    }
+    function quinta() {
+        div_msg.innerHTML = "<br>hoje é dia de <i><u>macarronada</u></i>";
+        img_prato.src = "imagens/macarronada.jpg";
+        img_prato.style = "height: 100px";
+    }
+    function sexta() {
+        div_msg.innerHTML = "<br>hoje é dia de peixe";
+        img_prato.src = "imagens/peixe.jpg";
+        img_prato.style = "height: 100px";
+    }
+</script>
