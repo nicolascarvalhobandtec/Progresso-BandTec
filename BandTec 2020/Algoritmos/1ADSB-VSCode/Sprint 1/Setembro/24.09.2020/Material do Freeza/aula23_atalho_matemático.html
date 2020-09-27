@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula23_Atalho_Matemático</title>
+</head>
+<body>
+    <h3>Atalhos Matemáticos</h3>
+    <input id="salario" placeholder="Entre com o Salário" type="text">
+    <br><br>
+    <button onclick="potencia()">Potencia 2</button>
+    <button onclick="aumenta1()">Aumentar 1</button>
+    <button onclick="diminui3()">Diminuir 3</button>
+    <button onclick="multiplica5()">Multiplicar 5</button>
+    <button onclick="divide5()">Dividir 5</button>
+    <button onclick="soma_simples()">Somar somente 1</button>
+    <button onclick="subtrai_simples()">Subtrair somente 1</button>
+</body>
+</html>
+<script>
+    // elevar a uma potencia 2=quadrado 3=cubo ....
+    function potencia() {
+        var resultado_potencia = Number(salario.value) ** 2;
+        alert (resultado_potencia);
+    }
+
+    // aumentar o valor de uma variável, neste caso em 1
+    function aumenta1() {
+        var resultado_aumenta1 = Number(salario.value);
+        resultado_aumenta1 += 1;
+        alert (resultado_aumenta1);
+    }
+
+    // diminuir o valor de uma variável, neste caso em 3
+    function diminui3() {
+        var resultado_diminui3 = Number(salario.value);
+        resultado_diminui3 -= 3;
+        alert (resultado_diminui3);
+    }
+
+    // multiplicar o conteúdo de uma variável, neste caso por 5
+    function multiplica5() {
+        var res_mult = Number(salario.value);
+        res_mult *= 5;
+        alert (res_mult);
+    }
+
+    // dividir o conteúdo de uma variável, neste caso por 5
+    function divide5() {
+        var res_divisao = Number(salario.value);
+        res_divisao /= 5;
+        // res_divisao = res_divisao / 5;
+        alert (res_divisao);
+    }
+
+    // aumentando o valor de uma variável em 1
+    function soma_simples() {
+        var resultado = Number(salario.value);
+        resultado ++;
+        alert(resultado);        
+    }
+
+    // diminuindo o valor de uma variável em 1
+    function subtrai_simples() {
+        var resultado = Number(salario.value);
+        resultado --;
+        alert(resultado);   
+        
+    }
+</script>

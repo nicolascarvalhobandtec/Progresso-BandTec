@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula24_Variável_Glogal</title>
+</head>
+<body>
+    Você já clicou <b id="b_vezes">0</b> vezes <br><br>
+    <button onclick="contar()">Clique Aqui</button> <br>
+    <button onclick="atualizar()">atualize o contador</button>
+</body>
+</html>
+<script>
+    // a variável criada fora de uma função é chamada de VARIÁVEL GLOBAL
+    // ela é criada imediatamente quando a página carrega
+    //      e seu valor é COMPARTILHADO entre todas as funções
+    var vezes = 0;
+
+    function contar() {
+       // NÃO devemor criar variáveis locais com o mesmo nome da variável Global
+
+       // aqui estamos adicionando 1 na variável global "vezes" 
+       vezes ++;
+    }
+
+    function atualizar() {
+        // nesta outra função estamos exibindo o conteúdo da variável global
+        b_vezes.innerHTML = vezes;
+    }
+
+
+</script>

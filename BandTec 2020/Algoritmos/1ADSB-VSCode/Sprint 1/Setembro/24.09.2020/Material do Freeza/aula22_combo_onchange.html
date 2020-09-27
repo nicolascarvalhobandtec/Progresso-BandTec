@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula22_Combo_onchange</title>
+</head>
+<body>
+    <h3>Sons Bichos</h3>
+
+    <!-- 
+        o onchange é acionado quando mudamos o valor seja via mouse,
+        seja via teclado
+    -->
+    <select id="bicho" onclick="som()">
+        <option value="escolha um bicho">** Escolha **</option>
+        <option value="miau!!!">Gatos</option>
+        <option value="au au au!!!">Cachorros</option>
+        <option value="piu piu piu!!!">Pintinhos</option>
+    </select>
+    <br><br>
+   <div id="div_mens">Qual o som do bicho</div>
+
+</body>
+</html>
+<script>
+    function som() {
+        alert(bicho.value);
+    //    div_mens.innerHTML = `${bicho.value}`;
+    }
+</script>
