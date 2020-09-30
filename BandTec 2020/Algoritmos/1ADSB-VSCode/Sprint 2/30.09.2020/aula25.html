@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 25 - IF </title>
+</head>
+<body>
+    Informe o total de pontos: <input id="pontos">
+    <br>
+    <button onclick="calcular()"> Calcular a Média! </button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+        var valor_multa = Number (pontos.value) * 78;
+        if (pontos.value >= 20) {
+            alert ("Sua carteira está suspensa")
+        }
+        mensagem.innerHTML = `O valor da multa é ${valor_multa}`;
+    }
+</script>
