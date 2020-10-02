@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Exercício 10 </title>
+    <title> Exercício 09 </title>
 </head>
-<body>
-    <!-- 
+<!-- 
         Refaça o programa da questão anterior de tal forma que 
         cada mensagem tenha cores de fundo e letra diferentes:
         a) Mensagem do 1º botão: com cor de fundo vermelha e letra branca
@@ -16,6 +15,26 @@
         c) Mensagem do 3º botão: com cor de fundo branca e letra verde
 
         OBS: Não pode aparecer mais de uma mensagem ao mesmo tempo. Sempre só uma mensagem por vez.
-     -->
+    -->
+<body>
+    <button onclick="parar()"> Pare! </button>
+    <button onclick="pensar()"> Pense! </button>
+    <button onclick="seguir()"> Siga! </button>
+    <div id="mensagem"></div>
 </body>
 </html>
+
+<script>
+    function parar() {
+        mensagem.innerHTML = `Pare e aguarde!`;
+        mensagem.style
+    }
+
+    function pensar() {
+        mensagem.innerHTML = `Pense se pode seguir ou se deve parar!`;
+    }
+    
+    function seguir() {
+        mensagem.innerHTML = `Pode seguir adiante :)`;
+    }
+</script>

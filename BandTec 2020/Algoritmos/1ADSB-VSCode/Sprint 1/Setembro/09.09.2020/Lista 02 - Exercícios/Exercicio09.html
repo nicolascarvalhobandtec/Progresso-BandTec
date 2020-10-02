@@ -19,11 +19,20 @@
     <button onclick="parar()"> Pare! </button>
     <button onclick="pensar()"> Pense! </button>
     <button onclick="seguir()"> Siga! </button>
+    <div id="mensagem"></div>
 </body>
 </html>
 
 <script>
     function parar() {
-        
+        mensagem.innerHTML = `Pare e aguarde!`;
+    }
+
+    function pensar() {
+        mensagem.innerHTML = `Pense se pode seguir ou se deve parar!`;
+    }
+    
+    function seguir() {
+        mensagem.innerHTML = `Pode seguir adiante :)`;
     }
 </script>

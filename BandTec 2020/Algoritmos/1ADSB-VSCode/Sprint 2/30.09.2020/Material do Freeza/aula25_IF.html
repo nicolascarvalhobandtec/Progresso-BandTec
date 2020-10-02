@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula25_IF</title>
+</head>
+<body>
+    <h3>Calculo do valor da multa</h3>
+    Informe o total de pontos: <br>
+    <input id="pontos" type="text" placeholder="Informe os pontos" > <br> <br>
+    <button onclick="calcular()">Calcular a Multa</button> <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var valor_multa = Number(pontos.value) * 78;
+
+        // Estrutura de Decisão if ("se")
+        // após o if escrevemos um TESTE LÓGICO entre os parênteses ()
+        // um teste lógico só pode ser VERDADE ou MENTIRA  (VERDADEIRO ou FALSO)
+        if (pontos.value >= 20) {
+            // se o teste do if for VERDADEIRO, 
+            //      esse bloco será executado (todos os comandos que estão entre as chaves {})
+            alert ("Sua carteira está suspensa");
+        }
+
+        // se o teste do if for FALSO, o bloco 
+        div_msg.innerHTML = `O valor da multa é ${valor_multa}`;
+    }
+</script>

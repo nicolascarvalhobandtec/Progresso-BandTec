@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula26_IF_else</title>
+</head>
+<body>
+    <h3>Calculo do valor da multa</h3>
+    Informe o total de pontos: <br>
+    <input id="pontos" type="text" placeholder="Informe os pontos" > <br> <br>
+    <button onclick="calcular()">Calcular a Multa</button> <br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        
+        var valor_multa = 0;    // criando a variável "valor_multa" com o valor 0
+            
+        // num bloco IF-ELSE sempre ocorre que:
+        //     OU o bloco IF é executado
+        //     OU o bloco ELSE é executado
+        // JAMAIS,  em hipótese alguma, ambos serão executados,
+        // SEMPRE um dos dois é executado.    
+        if (pontos.value >= 20) {
+            alert ("Sua carteira está suspensa");
+            valor_multa = Number(pontos.value) * 87;
+            
+        } else {  // senão, ou seja, se NÃO entrar no IF 
+                // neste caso, o ELSE será executado caso o pontos.value < 20
+            valor_multa = Number(pontos.value) * 78;
+        }
+
+        // o que está após um IF-ELSE, SEMPRE será executado
+        div_msg.innerHTML = `O valor da multa é ${valor_multa}`;
+    }
+</script>
