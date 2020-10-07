@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lista6_ex05_b</title>
+</head>
+<body>
+    <h3>Cálculo da conta de Luz</h3>
+    Entre com o consumo de energia: <br>
+    <input id="consumo" type="text" placeholder="Entre com o consumo"> <br><br>
+    <button onclick="calcular()">Calcular consumo</button>
+</body>
+</html>
+<script>
+    function calcular() {
+        var valor = consumo.value * 0.85;
+        if (consumo.value < 100) {
+            valor = valor * 0.9;         
+        } 
+        alert (valor.toFixed(2));
+        
+    }
+</script>

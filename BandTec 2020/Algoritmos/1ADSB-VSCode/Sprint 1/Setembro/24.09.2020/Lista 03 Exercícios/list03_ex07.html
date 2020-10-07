@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista03_ex07</title>
+</head>
+<body>
+    <h3>Cálculo de Frequência</h3>
+    Informe o seu nome: <br>
+    <input id="nome" type="text" placeholder="Nome do aluno"> <br><br>
+    Informe a qtde total de aulas <br>
+    <input id="tot_aulas" type="text" placeholder="Total de aulas"> <br><br>
+    Informe a qtde de faltas <br>
+    <input id="tot_faltas" type="text" placeholder="Total de faltas"> <br><br>
+    <button onclick="calcular()">Calcular a Frequência</button> <br><br>
+    <div id="div_msg"></div> <br>
+    <div id="div_barra" style="height: 20px; width: 0%; background-color: darkred;"></div>
+</body>
+</html>
+<script>
+    function calcular() {
+        var frequencia = (1 - (Number(tot_faltas.value) / Number(tot_aulas.value))) * 100;
+        div_msg.innerHTML = `<span style="color: blue";> Olá ${nome.value}!
+         Sua frequência foi de </span> <b style="color: green;">${frequencia}% </b>`; 
+        div_barra.style.width = `${frequencia}%`   
+    }
+
+</script>

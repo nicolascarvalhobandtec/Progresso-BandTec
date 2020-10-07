@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula27_b_if_else_if</title>
+</head>
+<body>
+    <h3>Analise da conta do Rodolpho</h3>
+    Entre com o saldo do cliente:
+    <input id="saldo" type="text" placeholder="Entre com Saldo">
+    <br><br>
+    <button onclick="analisar()">Analisar</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function analisar() {
+        var sdo = Number(saldo.value);
+        if (sdo < 0) {
+            div_msg.innerHTML = `Com o saldo de ${sdo} você está com saldo devedor`;
+        } else if (sdo <= 2000) {
+               div_msg.innerHTML = `Com o saldo de ${sdo} você está com saldo NORMAL`;
+            } else if (sdo < 5000) {
+                    div_msg.innerHTML = `Com o saldo de ${sdo} você está com saldo ACIMA DA MÉDIA`;                
+                } else {
+                    div_msg.innerHTML = `Com o saldo de ${sdo} você TEM PERFIL DE INVESTIDOR`;                   
+                }               
+        }  
+</script>

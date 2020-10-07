@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    Sabor da pizza: <input type="text" id="sabor_pizza">
+    <br>
+    Primeiro ingrediente: <select id="ingrediente_1">
+        <option value="0">- Escolha o ingrediente - </option>
+        <option value="2">Queijo</option>
+        <option value="3">Presunto</option>
+        <option value="1">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="2">Frango</option>
+        <option value="4">Catupiry</option>
+    </select>
+    <br>
+    Segundo ingrediente: <select id="ingrediente_2">
+        <option value="0">- Escolha o ingrediente - </option>
+        <option value="2">Queijo</option>
+        <option value="3">Presunto</option>
+        <option value="1">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="2">Frango</option>
+        <option value="4">Catupiry</option>
+    </select>
+    <br>
+    Terceiro ingrediente: <select id="ingrediente_3">
+        <option value="0">- Escolha o ingrediente - </option>
+        <option value="2">Queijo</option>
+        <option value="3">Presunto</option>
+        <option value="1">Ovo</option>
+        <option value="4">Palmito</option>
+        <option value="2">Frango</option>
+        <option value="4">Catupiry</option>
+    </select>
+    <br>
+    <button onclick="calcular_preco()">Calcular preço da Pizza</button>
+    <br>
+    <span id="mensagem"></span>
+</body>
+</html>
+
+<script>
+    function calcular_preco(){
+        var preco_total = Number(ingrediente_1.value) + Number(ingrediente_2.value) + Number(ingrediente_3.value);
+        mensagem.innerHTML = `A pizza de <b>${sabor_pizza.value}</b> vai custar um total de <u>R$${preco_total}</u>`;
+        
+        /*
+            Também poderíamos fazer dessa outra forma:
+            var ingrediente1 = Number(ingrediente_1.value);
+            var ingrediente2 = Number(ingrediente_2.value);
+            var ingrediente3 = Number(ingrediente_3.value);
+            var preco_total = ingrediente1 + ingrediente2 + ingrediente3;
+            mensagem.innerHTML = `A pizza de <b>${sabor_pizza.value}</b> vai custar um total de <u>R$${preco_total}</u>`;
+        */
+
+    }
+</script>
