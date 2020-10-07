@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 03 - IF/ELSE/IF (Entrega) </title>
+</head>
+<!-- 
+    3. Melhore o programa da questão anterior de tal forma que:
+
+a) Caso a nota digitada for menor que 0 ou maior que 10, exiba a mensagem
+
+    "Nota X é inválida!", onde X é anota informada. Texto sempre na cor preta.
+ -->
+ <body>
+    Insira aqui a nota do aluno: 
+    <br>
+    <input type="text" id="nota">
+    <br>
+    <br>
+    <button onclick="calcular()"> Classificar aluno! </button>
+    <div id="mensagem_nota"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+
+        var media = Number(nota.value);
+        var media = 0;
+
+        // if (media <0 && media >10) {
+        //     mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
+        // } else {
+        if (media <5) {
+            mensagem_nota.innerHTML =`Aluno precisa de muita ajuda`;
+            mensagem_nota.style = `color: red`;
+        } else {
+            if (media >=5 && media <=7) {
+               mensagem_nota.innerHTML = `Aluno na média`;
+               mensagem_nota.style = `color: orange`;
+            } else {
+                if (media >7 && media <=9.5) {
+                   mensagem_nota.innerHTML = `Aluna está acima da média`;
+                   mensagem_nota.style = `color: green`;
+                 } else {
+                    if (media >9.5 && media <=10) {
+                    mensagem_nota.innerHTML = `Aluno fora da curva`;
+                    mensagem_nota.style = `color: blue`;
+                   }
+                }
+            }
+       }
+    }
+}

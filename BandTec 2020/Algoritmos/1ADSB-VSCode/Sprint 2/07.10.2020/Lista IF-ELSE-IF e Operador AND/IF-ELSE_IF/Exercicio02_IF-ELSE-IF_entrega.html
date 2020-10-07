@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 02 - IF/ELSE/IF (Entrega) </title>
+</head>
+<!-- 
+    2. Melhore o programa da questão anterior de tal forma que:
+
+a) As mensagens sejam exibidas na própria página, logicamente apenas uma por vez. Sempre abaixo do botão
+
+b) A primeira mensagem deve estar sempre com o texto na cor vermelha
+
+c) A segunda mensagem deve estar sempre com o texto na cor laranja
+
+d) A terceira mensagem deve estar sempre com o texto na cor verde
+
+e) A quarta mensagem deve estar sempre com o texto na cor azul
+ -->
+ <body>
+    Insira aqui a nota do aluno: 
+    <br>
+    <input type="text" id="nota">
+    <br>
+    <br>
+    <button onclick="calcular()"> Classificar aluno! </button>
+    <div id="mensagem_nota"></div>
+</body>
+</html>
+
+<script>
+    function calcular() {
+
+        if (nota.value <5) {
+            mensagem_nota.innerHTML =`Aluno precisa de muita ajuda`;
+            mensagem_nota.style = `color: red`;
+        } else {
+            if (nota.value >=5 && nota.value <=7) {
+               mensagem_nota.innerHTML = `Aluno na média`;
+               mensagem_nota.style = `color: orange`;
+            } else {
+                if (nota.value >7 && nota.value <=9.5) {
+                   mensagem_nota.innerHTML = `Aluna está acima da média`;
+                   mensagem_nota.style = `color: green`;
+                 } else {
+                    if (nota.value >9.5 && nota.value <=10) {
+                    mensagem_nota.innerHTML = `Aluno fora da curva`;
+                    mensagem_nota.style = `color: blue`;
+                }
+            }
+        }
+    }
+}
+</script>

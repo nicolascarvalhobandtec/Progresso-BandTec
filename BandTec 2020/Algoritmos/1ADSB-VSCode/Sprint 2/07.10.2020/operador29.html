@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Operador E(AND/&& Parte 2) </title>
+</head>
+<body>
+    Insira a primeira nota do aluno:
+    <br>
+    <input type="text" id="nota1">
+    <br>
+    <br>
+    Insira a segunda nota do aluno:
+    <br>
+    <input type="text" id="nota2">
+    <br>
+    <br>
+    Insira a frequência do aluno:
+    <br>
+    <input type="text" id="freq">
+    <br>
+    <br>
+    <button onclick="analisar()"> Analise! </button>
+</body>
+</html>
+
+<script>
+    function analisar() {
+        var media_nota1 = Number(nota1.value);
+
+        var media_nota2 = Number(nota2.value);
+
+        var frequencia = Number(freq.value);
+
+        media = (media_nota1 + media_nota2) / 2;
+
+        if (media_nota1 >= 5 && media_nota2 >=6 && frequencia >= 75) {
+            alert (`Aprovado!`)
+        } else {
+            alert (`Reprovado!`)
+        }
+    }
+</script>
+
+
