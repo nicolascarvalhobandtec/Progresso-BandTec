@@ -26,25 +26,27 @@ a) Caso a nota digitada for menor que 0 ou maior que 10, exiba a mensagem
 <script>
     function calcular() {
 
-        var media = Number(nota.value);
-        var media = 0;
-
-        // if (media <0 && media >10) {
-        //     mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
-        // } else {
-        if (media <5) {
+        if (nota.value <0) {
+            mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
+            mensagem_nota.style = `color: black`;
+        } 
+        if (nota.value >10) {
+            mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
+            mensagem_nota.style = `color: black`;
+        }
+        if (nota.value == 0 && nota.value <5) {
             mensagem_nota.innerHTML =`Aluno precisa de muita ajuda`;
             mensagem_nota.style = `color: red`;
         } else {
-            if (media >=5 && media <=7) {
+            if (nota.value >=5 && nota.value <=7) {
                mensagem_nota.innerHTML = `Aluno na média`;
                mensagem_nota.style = `color: orange`;
             } else {
-                if (media >7 && media <=9.5) {
-                   mensagem_nota.innerHTML = `Aluna está acima da média`;
+                if (nota.value >7 && nota.value <=9.5) {
+                   mensagem_nota.innerHTML = `Aluno está acima da média`;
                    mensagem_nota.style = `color: green`;
                  } else {
-                    if (media >9.5 && media <=10) {
+                    if (nota.value >9.5 && nota.value <=10) {
                     mensagem_nota.innerHTML = `Aluno fora da curva`;
                     mensagem_nota.style = `color: blue`;
                    }
@@ -52,4 +54,33 @@ a) Caso a nota digitada for menor que 0 ou maior que 10, exiba a mensagem
             }
        }
     }
+
+
+</script>
+
+<!-- if (nota.value == 0 && nota.value <5) {
+    mensagem_nota.innerHTML =`Aluno precisa de muita ajuda`;
+    mensagem_nota.style = `color: red`;
+} else {
+    if (nota.value >=5 && nota.value <=7) {
+       mensagem_nota.innerHTML = `Aluno na média`;
+       mensagem_nota.style = `color: orange`;
+    } else {
+        if (nota.value >7 && nota.value <=9.5) {
+           mensagem_nota.innerHTML = `Aluno está acima da média`;
+           mensagem_nota.style = `color: green`;
+         } else {
+            if (nota.value >9.5 && nota.value <=10) {
+            mensagem_nota.innerHTML = `Aluno fora da curva`;
+            mensagem_nota.style = `color: blue`;
+           }
+        }
+    }
+}if (media <0) {
+    mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
+} 
+if (media >10) {
+    mensagem_nota.innerHTML = `Nota ${nota.value} INVÁLIDA!`;
 }
+
+</script> -->

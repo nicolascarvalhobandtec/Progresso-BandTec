@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula28_operador e</title>
+</head>
+<body>
+    <!-- 
+        Um aluno para ser aprovado precisa de MEDIA >= 6 e FREQUENCIA >= 75
+    -->
+    Entre com a média do aluno: <br>
+    <input id="media" type="text"> <br><br>
+    Entre com a Frequência do aluno: <br>
+    <input id="freq" type="text"> <br><br>
+    <button onclick="analisar()">Analisar o Aluno</button>
+</body>
+</html>
+<script>
+    function analisar() {
+        if (media.value >= 6 && freq.value >= 75) {
+            alert ("aprovado");
+        } else {
+            alert ("reprovado");
+        }
+    }
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 30 - Operador OU(OR - ||) </title>
+</head>
+<!-- 
+    Na primeira fase do processo de seleção para uma faculdade os alunos
+    participarão da dinâmica se tiver nota no ENEM ou a nota do vestibular
+    a partir de 450.
+-->
+<body>
+    Insira a nota do ENEM do aluno:
+    <br>
+    <input type="text" id="notaENEM">
+    <br>
+    <br>
+    Insira a nota do VESTIBULAR do aluno:
+    <br>
+    <input type="text" id="vestibular">
+    <br>
+    <br>
+    <button onclick="analisar()"> Analisar Agora! </button>
+</body>
+</html>
+
+<script>
+    function analisar() {
+
+        if (notaENEM.value >= 450 || vestibular.value >= 450) {
+        alert (`Você foi selecionado para a dinâmica de grupo. Prepare-se!`);
+        } else {
+            alert (`Tente novamente no próximo semestre.`);
+        }
+    }
+</script>
+
+

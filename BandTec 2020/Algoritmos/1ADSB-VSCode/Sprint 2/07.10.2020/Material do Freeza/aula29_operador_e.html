@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula29_operador e</title>
+</head>
+
+<body>
+    <!--
+        Receber as duas notas do aluno e sua frequência. Emitir mensagem de "aprovado" para 
+        quem tiver MEDIA a partir de 6 e FREQUENCIA acima de 75 e nenhuma nota abaixo de 5
+    -->
+    <input id="nota1" placeholder="Entre com a nota1" type="text"> <br>
+    <input id="nota2" placeholder="Entre com a nota2" type="text"> <br>
+    <input id="freq" placeholder="Entre com a frequência" type="text"> <br><br>
+    <button onclick="analisar()">Verificar aluno</button>
+</body>
+
+</html>
+<script>
+    function analisar() {
+        var n1 = Number(nota1.value);
+        var n2 = Number(nota2.value);
+        var frequencia = Number(freq.value);
+        var media = (n1 + n2) / 2;
+        if (n1 >= 5 && n2 >= 5 && media >= 6 && frequencia > 75) {
+            alert("aprovado");
+        } else {
+            alert("reprovado");
+        }
+    }
+</script>
