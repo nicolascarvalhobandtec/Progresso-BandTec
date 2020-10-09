@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula30 Oper. ou</title>
+</head>
+<body>
+    <!-- 
+        Na primeira fase do processo de seleção para uma faculdade os alunos
+        participarão da dinamica se tiver nota no ENEM ou a nota do vetibular 
+        a partir de 450.
+    -->
+    <input id="enem" placeholder="Nota do ENEM" type="text"> <br>
+    <input id="vest" placeholder="Nota do Vestibular" type="text"> <br><br>
+    <button onclick="analisar()">Verificar</button>
+</body> 
+</html>
+<script>
+    function analisar() {
+        if (enem.value >= 450 || vest.value >= 450) {
+            alert ("Você foi selecionado para dinâmica de grupo");
+        } else {
+            alert ("Tente novamente no próximo semestre");
+        }
+    }
+</script>
