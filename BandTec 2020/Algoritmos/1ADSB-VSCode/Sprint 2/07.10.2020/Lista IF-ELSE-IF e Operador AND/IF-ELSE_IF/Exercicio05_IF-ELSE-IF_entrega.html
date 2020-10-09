@@ -6,7 +6,9 @@
     <title> Exercício 05 - IF/ELSE/IF (Entrega) </title>
 </head>
 <!-- 
-    5. Olivia Letória é nutricionisa e precisa ajudar seus pacientes a não engordarem tanto na quarentena do Covid19. Ajude ela criando um programa em HTML/JS o qual:
+    5. Olivia Letória é nutricionisa e precisa ajudar seus pacientes
+       a não engordarem tanto na quarentena do Covid19. 
+       Ajude ela criando um programa em HTML/JS o qual:
 
 a) Pergunte quantos pães franceses o usuário tem comido por dia
 
@@ -14,7 +16,11 @@ b) Pergunte quantos pacotes de bolacha recheada o usuário tem comido por dia
 
 c) Pergunte quantos copos de achocolatado o usuário tem tomado por dia
 
-d) Ao clicar em "Verificar calorias", calcule quantas calorias o usuário tem consumido com base nas 3 informações. Considere que um pão francês tem 50 calorias, um pacote de bolacha, 80 e um copo de achocolatado, 70.
+d) Ao clicar em "Verificar calorias", calcule quantas calorias o 
+   usuário tem consumido com base nas 3 informações. 
+   Considere que um pão francês tem 50 calorias, 
+   um pacote de bolacha tem 80 e 
+   um copo de achocolatado tem 70.
 
 e) Após fazer o cálculo, exiba uma dessas frases, abaixo do botão:
 
@@ -28,6 +34,38 @@ f) Faça o teste de mesa para essa questão
 
  -->
 <body>
-    
+    <h3> Ajudando a Olivia Letória </h3>  
+      Diga quantos pães franceses o usuário tem comido por dia:
+      <br>
+      <input type="text" id="paes">
+      <br> <br>
+      Diga quantos pacotes de bolacha recheada o usuário tem comido por dia:
+      <br>
+      <input type="text" id="bolacha">
+      <br> <br>
+      Diga quantos copos de achocolatado o usuário tem tomado por dia:
+      <br>
+      <input type="text" id="achocolatado">
+      <br><br>
+      <button onclick="verificar()"> Verificar Calorias </button>
+      <div id="mensagem"></div>
 </body>
 </html>
+
+<script>
+    // Sobre as calorias dos pães
+    var caloria_pao = paes.value;
+    var caloria_pao = 50;
+
+    // Sobre as calorias das bolachas
+    var caloria_bolacha = bolacha.value;
+    var caloria_bolacha = 80;
+    
+    // Sobre as calorias dos achocolatados
+    var caloria_achocolatado = achocolatado.value;
+    var caloria_achocolatado = 70;
+
+    function verificar () {
+        
+    }
+</script>

@@ -9,6 +9,7 @@
     4. Crie um programa o qual:
     a) Pergunte numa combo, qual time grande São Paulo o usuário torce. Use uma combo.
     b) Ao clicar em "Fale sobre esse time", exiba abaixo:
+    
    "Salve o Corinthians" com fundo preto e letra branca, se for Corinthians
    "Salve o alviverde imponente" com fundo verde e letra branca, se for Palmeiras
    "Agora que dá a bola é o Santos" com fundo branco e letra preta, se for Santos
@@ -16,12 +17,31 @@
  -->
 <body>
     
-    <select id="times">
-        <option value="escolha"> Fala Sobre Esse Tema </option>
-        <option value="timão"> Salve o Corinthians </option>
-        <option value="alviverde"> Salve o Alviverde Imponente </option>
-        <option value="santos"> Agora que dá a bola é o Santos </option>
-        <option value="tricolor"> Salve o Tricolor Paulista </option>
+    <select id="times" onchange="torcer()">
+        <option value="escolha"> ---> Fala Sobre Esse Tema <--- </option>
+        <option value="timao"> Corinthians </option>
+        <option value="palmeiras"> Palmeiras </option>
+        <option value="santos"> Santos </option>
+        <option value="tricolor"> São Paulo </option>
     </select>
+    <div id="mensagem"></div>
 </body>
 </html>
+
+<script>
+    function torcer() {
+        if (times.value == "timao") {
+            mensagem.innerHTML = `Salve o Corinthians`;
+            mensagem.style = `background-color: black; color: white`
+        } else if (times.value == "palmeiras") {
+            mensagem.innerHTML = `Salve o Alviverde Imponente`;
+            mensagem.style = `background-color: green; color: white`
+        } else if (times.value == "santos") {
+            mensagem.innerHTML = `Agora que dá a bola é o Santos`;
+            mensagem.style = `background-color: white; color: black`
+        } else if (times.value == "tricolor") {
+            mensagem.innerHTML = `Salve o Tricolor paulista`;
+            mensagem.style = `background-color: black; color: red`
+        }
+    }
+</script>
