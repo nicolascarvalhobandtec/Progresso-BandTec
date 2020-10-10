@@ -19,6 +19,44 @@ c) Considere que o clima é no hemisfério norte, ou seja:
     Inverno: dezembro, janeiro e fevereiro.
  -->
 <body>
-    
+    <h3> Estações do Ano no Hemisfério Norte </h3>
+    <select id="estacoes" onchange="alterar()">
+        <option value="selecao"> --- Selecione um Mês --- </option>
+        <option value="mes1"> Janeiro </option>
+        <option value="mes2"> Fevereiro </option>
+        <option value="mes3"> Março </option>
+        <option value="mes4"> Abril </option>
+        <option value="mes5"> Maio </option>
+        <option value="mes6"> Junho </option>
+        <option value="mes7"> Julho </option>
+        <option value="mes8"> Agosto </option>
+        <option value="mes9"> Setembro </option>
+        <option value="mes10"> Outubro </option>
+        <option value="mes11"> Novembro </option>
+        <option value="mes12"> Dezembro </option>
+    </select><br><br>
+
+    <div id="mensagem"></div>
 </body>
 </html>
+
+<script>
+    function alterar() {
+        if (estacoes.value == "selecao") {
+        mensagem.innerHTML=""}
+
+        else if (estacoes.value == "mes3" || estacoes.value == "mes4" || estacoes.value == "mes5") {
+            mensagem.innerHTNL = `Primavera<br>`;
+            mensagem.innerHTML += `<img src="./img (exercicio07)/primavera.jpg">`;
+        } else if (estacoes.value == "mes6" || estacoes.value == "mes7" || estacoes.value == "mes8" ) {
+            mensagem.innerHTML = `Verão<br>`;
+            mensagem.innerHTML += `<img src="./img (exercicio07)/verao.jpg">`;
+        } else if (estacoes.value == "mes9" || estacoes.value == "mes10" || estacoes.value == "mes11") {
+            mensagem.innerHTL = `Outono<br>`;
+            mensagem.innerHTML = `<img src="./img (exercicio07)/verao.jpg">`;
+        } else if (estacoes.value == "mes12" || estacoes.value == "mes1" || estacoes.value == "mes2") {
+            mensagem.innerHTML = `Inverno<br>`;
+            mensagem.innerHTML = `<img src="./img (exercicio07)/inverno.jpg">`;
+        }
+    }
+</script>

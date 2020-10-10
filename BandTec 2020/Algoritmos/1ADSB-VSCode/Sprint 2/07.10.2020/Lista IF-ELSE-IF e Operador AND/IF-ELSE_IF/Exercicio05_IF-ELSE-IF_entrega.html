@@ -49,23 +49,40 @@ f) Faça o teste de mesa para essa questão
       <br><br>
       <button onclick="verificar()"> Verificar Calorias </button>
       <div id="mensagem"></div>
+      
 </body>
 </html>
 
 <script>
-    // Sobre as calorias dos pães
-    var caloria_pao = paes.value;
-    var caloria_pao = 50;
-
-    // Sobre as calorias das bolachas
-    var caloria_bolacha = bolacha.value;
-    var caloria_bolacha = 80;
-    
-    // Sobre as calorias dos achocolatados
-    var caloria_achocolatado = achocolatado.value;
-    var caloria_achocolatado = 70;
-
+   
     function verificar () {
-        
+        var caloria_paes = Number (paes.value) * 50;
+        var caloria_bolacha = Number (bolacha.value) * 80;
+        var caloria_choco = Number (achocolatado.value) * 70;
+
+        var caloria_total = caloria_paes + caloria_bolacha + caloria_choco;
+
+        if (caloria_total < 200) {
+            mensagem.innerHTML = `Parabéns, vai sair em forma da quarentena!`;
+        } else if (caloria_total >= 200 && caloria_total <= 400) {
+            mensagem.innerHTML = `Cuidado, vai ficar mais "fofinho(a)" após a quarentena!`;
+        } else if (caloria_total > 400) {
+            mensagem.innerHTML = `Bom, acho que muitos não vão te reconhecer após a quarentena...`;
+        }
     }
 </script>
+
+<!-- // // Sobre as calorias dos pães
+// // Considere que um pão francês tem 50 calorias 
+// var caloria_pao = paes.value;
+// var caloria_pao = 50;
+
+// // Sobre as calorias das bolachas
+// // um pacote de bolacha tem 80
+// var caloria_bolacha = bolacha.value;
+// var caloria_bolacha = 80;
+
+// // Sobre as calorias dos achocolatados
+// // um copo de achocolatado tem 70
+// var caloria_achocolatado = achocolatado.value;
+// var caloria_achocolatado = 70; -->
