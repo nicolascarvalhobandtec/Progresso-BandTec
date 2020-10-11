@@ -30,6 +30,44 @@ d) Ao clicar no botão "Sou vegano", aparece um alert com uma dessas frases:
     "Não, você não é vegano", caso contrário
  -->
 <body>
-    
+    <h2> Você é VEGANO(A)? Será mesmo? </h2>
+    <h2> Prove-se ! </h2>
+    <br>
+    <select id="veganismo">
+        <option value="cafezinho"> O que você come no café da manhã? </option>
+        <option value="ovinho"> Ovos </option>
+        <option value="leitinho"> Leite de Arroz </option>
+        <option value="bacinho"> Bacon </option>
+    </select>
+    <br>
+    <br>
+    <select id="almocando">
+        <option value="almoco"> O que você come no almoço? </option>
+        <option value="bifinho"> Bife </option>
+        <option value="burguinho"> Hamburger de Soja </option>
+        <option value="franguinho"> Frango Grelhado </option>
+    </select>
+    <br>
+    <br>
+    <select id="jantando">
+        <option value="jantar"> O que você come na janta? </option>
+        <option value="picanhinha"> Picanha de Soja </option>
+        <option value="burguinho"> Cupim </option>
+        <option value="franguinho"> Coração </option>
+    </select>
+    <br>
+    <br>
+    <button onclick="averiguar()"> Sou Vegano! </button>
 </body>
 </html>
+
+<script>
+    function averiguar() {
+        if (veganismo.value == "leitinho" && almocando.value == "burguinho" &&
+            jantando.value == "picanhinha") {
+            alert (`Sim, você é Vegano!`)
+        } else {
+            alert (`Não! Você não é Vegano!`)
+        }
+    }
+</script>

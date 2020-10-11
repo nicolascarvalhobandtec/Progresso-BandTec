@@ -25,5 +25,19 @@ c) Ao clicar em "Verificar ajuda", exibe um alert com uma dessas mensagens
     <input type="text" id="renda" placeholder="Insira aqui a sua renda:">
     <br>
     <br>
+    <input type="text" id="renda_familiar" placeholder="Insira aqui a sua renda total familiar:">
+    <br>
+    <br>
+    <button onclick="verificar()"> Verificar Ajuda! </button>
 </body>
 </html>
+
+<script>
+    function verificar() {
+        if (renda.value <= 1050 && renda_familiar.value <= 2100) {
+            alert (`Você terá direito! Desfrute bem.`);
+        } else {
+            alert (`Você NÃO terá direito. Lamentamos...`)
+        }
+    }
+</script>

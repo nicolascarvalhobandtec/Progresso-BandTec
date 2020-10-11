@@ -17,6 +17,19 @@ b) Ao clicar em "Medir conforto", exiba um alert com uma dessas frases
     "Temperatura não está confortável", caso contrário.
  -->
 <body>
-    
+    <h3> Termômetro Local </h3>
+    <br>
+    Insira aqui a temperatura do ambiente: <input type="text" id="temperatura">
+    <button onclick="medir()"> Medir Conforto! </button>
 </body>
 </html>
+
+<script>
+    function medir() {
+        if (temperatura.value >= 22 && temperatura.value <= 23) {
+            alert (`Temperatura Confortável! :D`)
+        } else {
+            alert (`Temperatura não está confortável! :(`)
+        }
+    }
+</script>

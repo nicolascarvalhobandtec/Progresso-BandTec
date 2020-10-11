@@ -6,7 +6,7 @@
     <title> Exercício 04 - Operador AND (Entrega) </title>
 </head>
 <!-- 
-    4. Milhares de anos antes de Cristo não existia Tinder, Badoo e 
+ 4. Milhares de anos antes de Cristo não existia Tinder, Badoo e 
     afins para se conseguir um relacionamento, seja ele breve ou duradouro. 
     Para um pai permitir que sua filha se relacionasse com sua filha, 
     as vezes colocava condições insanas. 
@@ -17,17 +17,44 @@ a) Solicite o tempo, em anos, que ele trabalhou para o pai da pretendente
 
 b) Solicite a quantidade, em kilos, de trigo, que suas plantações renderam
 
-c) Solicite a quantidade em dias que ele falou ao trabalho por estar doente
+c) Solicite a quantidade em dias que ele faltou ao trabalho por estar doente
 
 d) Ao clicar no botão "Deu match?", podem aparecer as seguintes coisas abaixo desse botão:
 
-    A frase "Minha filha será sua!" e a foto de uma noiva. Somente se o homem trabalhou pelo menos 5 anos, se seu trabalho rendeu pelo menos 300 kilos de trigo e se faltou até 5 dias de trabalho.
+    A frase "Minha filha será sua!" e a foto de uma noiva. 
+    Somente se o homem trabalhou pelo menos 5 anos, 
+    se seu trabalho rendeu pelo menos 300 kilos de trigo e se faltou até 5 dias de trabalho.
 
-    A frase "Deu ruim! Trabalhe mais 2 anos" e a foto de um homem representando um pai bravo, caso contrário.
-
-
+    A frase "Deu ruim! Trabalhe mais 2 anos" e a foto de um 
+    homem representando um pai bravo, caso contrário.
  -->
 <body>
-    
+    Insira o tempo em que ele trabalhou para o pai da pretendente:
+    <input type="text" id="tempo" placeholder="Tempo em ANOS">
+    <br>
+    <br>
+    Insira a quantidade de trigo que suas plantações renderam:
+    <input type="text" id="trigo" placeholder="Quantidade em KILOS">
+    <br>
+    <br>
+    Insira a quantidade de dias que ele faltou ao trabalho por estar doente:
+    <input type="text" id="faltas">
+    <br>
+    <br>
+    <button onclick="juntar()"> Deu Match? </button>
+    <div id="mensagem"></div>
+    <div id="imagem"></div>
 </body>
 </html>
+
+<script>
+    function juntar() {
+        if (tempo.value >= 5 && trigo.value >= 300 && faltas.value <= 5) {
+            mensagem.innerHTML = `Minha filha será sua. Cuide bem dela!`
+            imagem.innerHTML = `<img src="./img (exercicio04)/noiva.jpg">`
+        } else {
+            mensagem.innerHTML = `Deu ruim! Trabalhe mais 2 anos.`
+            imagem.innerHTML = `<img src="./img (exercicio04)/pai_bravo.jpg">`
+        }
+    }
+</script>
