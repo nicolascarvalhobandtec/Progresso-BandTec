@@ -1,7 +1,8 @@
 -- Criação do banco de dados (schema) aluno
 create database Sala_Aula;
-use Sala_Aula;  -- seleciona o banco de dados aluno
--- isso é um comentário
+-- seleciona o banco de dados aluno
+use Sala_Aula;
+
 -- criação da tabela aluno
 create table Aluno (
   ra int primary key,    -- ra é a chave primária da tabela aluno 
@@ -156,7 +157,7 @@ select * from Curso;
 
 -- Exibir os dados dos alunos e dos cursos correspondentes
 select * from Aluno, Curso where fkCurso = idCurso;
- select Aluno.*, nomeCurso, coordenador from Aluno, Curso where fkCurso = idCurso;
+select Aluno.*, nomeCurso, coordenador from Aluno, Curso where fkCurso = idCurso;
  
  -- Inserção de um novo aluno, agora com a fkCurso
  insert into Aluno values 

@@ -21,6 +21,7 @@ select * from Revistas;
 update Revistas set categoria = 'Infantil' where idRevista in (1);
 update Revistas set categoria = 'Automobilismo' where idRevista in (2);
 update Revistas set categoria = 'Jogos' where idRevista in (3);
+update Revistas set categoria = 'Shounen Jump' where idRevista in (4);
 
 select * from Revistas;
 
@@ -42,8 +43,10 @@ select * from Revistas;
 alter table Revistas drop column periodicidade;
 select * from Revistas;
 
+drop table Revistas;
+
 -- ------------------------------------------------------------------------------------------------------------------------------------
--- Próxima Tabela
+--                             Próxima Tabela
 -- ------------------------------------------------------------------------------------------------------------------------------------
 
 create table Editora (
@@ -63,6 +66,23 @@ insert into Editora (nomeEditora, dataFund) values
 ('Editora Abril', '1969-05-28'),
 ('Editora Europa', '2011-11-11');
 
-select * from Editora;
+
+alter table Revistas add fkEditora int,
+add foreign key (fkEditora) references Editora (idEditora);
+
+update Revistas set fkEditora = 1000 where idRevista in (1);
+select * from Revistas;
+update Revistas set fkEditora = 1001 where idRevista in (2);
+update Revistas set fkEditora = 1002 where idRevista in (3);
+update Revistas set fkEditora = 1003 where idRevista in (4);
+update Revistas set fkEditora = 1004 where idRevista in (5);
+update Revistas set fkEditora = 1005 where idRevista in (6);
+update Revistas set fkEditora = 1006 where idRevista in (7);
+select * from Revistas;
+
+desc Revistas;
+desc Editora;
+
+select * from Revistas, Editora where fkEditora = idEditora;
 
 -- ------------------------------------------------------------------------------------------------------------------------------------
