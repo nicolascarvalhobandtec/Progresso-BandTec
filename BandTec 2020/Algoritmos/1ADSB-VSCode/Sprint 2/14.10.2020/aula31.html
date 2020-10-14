@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 31 -Incremento </title>
+</head>
+<body>
+    <button onclick="analisar()"> Analise! </button>
+    <div id="mensagem_pos"></div>
+    <br>
+    <br>
+    <div id="mensagem_pre"></div>
+</body>
+</html>
+
+<script>
+    var pos = 0;
+    var pre = 0;
+    function analisar() {
+        if (pos++ == 5) {
+            mensagem_pos.innerHTML = `Pos -cheguei no pos`;
+        } else {
+            mensagem_pos.innerHTML = `Pos ainda não` + pos;
+        }
+
+        if (pre-- == 5) {
+            mensagem_pre.innerHTML = `Pre -cheguei no pos`;
+        } else {
+            mensagem_pre.innerHTML = `Pre ainda não` + pre;
+        }
+    }
+</script>
