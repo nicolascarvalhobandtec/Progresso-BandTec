@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula32_op_matematico</title>
+</head>
+<body>
+    <h3>Operadores Matemáticos II</h3>
+    Entre com um número fracionário: <br>
+    <input id="num" type="text"> <br><br>
+    <button onclick="tofixed()">toFixed</button>
+    <button onclick="parseint()">parseInt</button>
+    <button onclick="round()">roud</button>
+    <button onclick="trunc()">trunc</button>
+</body>
+</html>
+<script>
+    function tofixed() {
+        var numero = Number(num.value);
+        alert(numero.toFixed());
+    // var.toFixed() fornece o número arredondados com a quantidade de casas decimais especificadas
+    }
+    function parseint() {
+        var numero = Number(num.value);
+        alert(parseInt(numero));
+    // parseInt(var) fornece a parte inteira de um número na base especificada.       
+    }
+    function round() {
+        var numero = Number(num.value);
+        alert(Math.round(numero));
+    // Math.round(var) retorna o inteiro mais próximo do número especificado.
+    // Ele ARREDONDA o inteiro
+    }
+    function trunc() {
+        var numero = Number(num.value);
+        alert(Math.trunc(numero));   
+    // Math.trunc(var) retorna a parte inteira de um número. 
+    // Ele TRUNCA a parte decimal do número
+
+    }
+</script>

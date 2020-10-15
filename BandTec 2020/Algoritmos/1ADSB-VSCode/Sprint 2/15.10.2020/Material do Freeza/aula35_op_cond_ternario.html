@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aula35 Op.Cond.Ternário</title>
+</head>
+<body>
+    <h3>Operador condicional ternário</h3>
+    Entre com a média do aluno: <br>
+    <input id="media" type="text"><br><br>
+    <button onclick="basico()">Básico</button> 
+    <button onclick="variavel()">Variável</button> 
+    <button onclick="condicao()">Mais Cond.</button> 
+    <button onclick="operacao()">Mais Oper.</button> 
+</body>
+</html>
+<script>
+
+    function basico() {
+        media.value >= 6 ? alert ("aprovado") : alert("reprovado");
+     //   condição       ?      thru         :      false   
+    }
+    function variavel() {
+        var result = (media.value >= 6 ? "aprovado" : "reprovado");
+        alert(result);
+    //   resultado  =   condição  ?  true    :    false     
+    // O operador condicional ternário pode ser usado para atribuir valor 
+    // a uma variável.    
+    }
+    function condicao() {
+        media.value < 6 ? alert ("reprovado") :
+         media.value >= 9 ? alert("SUPEROU!!") : alert ("aprovado");
+    // é possível ter múltiplas decisões
+    }
+    function operacao() {
+        media.value < 6 ? (alert ("reprovado"), alert("tente novamente")) : alert ("aprovado");
+    // é possível ter múltiplos comandos
+    }
+</script>

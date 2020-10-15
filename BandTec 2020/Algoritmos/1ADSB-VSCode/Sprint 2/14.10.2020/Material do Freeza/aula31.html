@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula31</title>
+</head>
+<body>
+    <button onclick="analisar()">Clique Aqui</button>
+    <div id="div_msg"></div> <br><br>
+    <div id="div_pos"></div>
+</body>
+</html>
+<script>
+    var pre = 0;
+    var pos = 0;
+    function analisar() {   
+        if (pos++ == 5) {
+            div_msg.innerHTML = "pos -cheguei no pos";
+        } else {
+            div_msg.innerHTML = "pos ainda não" + pos;
+        }
+        if (++pre == 5) {
+            div_pos.innerHTML = "pre cheguei no pre";
+        } else {
+            div_pos.innerHTML = "pre ainda não" + pre;
+        } 
+    }
+
+
+</script>

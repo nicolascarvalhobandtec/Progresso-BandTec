@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 32 - Atalhos Matemáticos II </title>
+</head>
+<body>
+    <h3> Operadores Matemáticos II </h3>
+    <input type="text" id="num">
+    <button onclick="tofixed()"> toFixed </button>
+    <button onclick="parseint()"> parseInt </button>
+    <button onclick="round())"> round </button>
+    <button onclick="trunc()"> trunc </button>
+</body>
+</html>
+
+<script>
+    function tofixed() {
+        
+    }
+
+    function perseint(){
+        var numero = Number (num.value);
+        alert(parseInt(numero));
+    // perseInt(var) fornece parte inteira de um numero na base especifica
+    }
+
+    function round() {
+        var numero = Number(num.value);
+        alert(Math.round(numero));
+    }
+
+    function trunc() {
+    var numero = Number(num.value);
+    alert (Math.trunc(numero));
+    }
+</script>

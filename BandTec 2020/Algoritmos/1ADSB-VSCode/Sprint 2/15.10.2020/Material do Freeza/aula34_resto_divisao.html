@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula32_resto_divisao</title>
+</head>
+<body>
+    <h3>Cálculo do resto da Divisão</h3>
+    Entre com o primeiro número: <br>
+    <input id="num1" type="text"><br><br>
+    Entre com o segundo  número: <br>
+    <input id="num2" type="text"> <br><br>
+    <button onclick="mostrar()">Qual o resto da Divisão</button>
+    <button onclick="par()">o Primeiro é par?</button>
+    <button onclick="impar()">o Segundo é impar?</button>
+</body>
+</html>
+<script>
+    function mostrar() {
+        alert(num1.value % num2.value);
+    }
+    function par() {
+      if ((num1.value % 2) == 0) {
+          alert ("o primeiro é par");
+      } else {
+        alert ("o primeiro é impar");  
+      }
+    }
+    function impar() {
+        var result = num2.value % 2;
+     //   if (result == 0) {
+     //       alert ("não, o segundo não é impar")
+     //   } else {
+     //       alert ("sim, o segundo é impar")
+        result == 0 ? alert ("não, o segundo não é impar") :
+           alert ("sim, o segundo é impar")   
+        
+    }
+</script>

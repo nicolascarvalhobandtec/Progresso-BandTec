@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula33_Random</title>
+</head>
+<body>
+    <h3>Números Aleatórios</h3>
+    <button onclick="zero_um()">(>=0e<1)</button>
+    <button onclick="zero_tres()">(>=0e<3)</button>
+    <button onclick="menostres_zero()">(>-3e<=0)</button>
+    <button onclick="um_tres()">(>=1e<3)</button>
+    <button onclick="inteiro4_8()">de4a8</button>
+    <button onclick="limpar()">Limpar Resultados</button>
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function limpar() {
+        div_msg.innerHTML = "";
+    }
+    function zero_um() {
+        // var result =  ;
+        div_msg.innerHTML += `${Math.random()} <br>`;
+        
+    }
+    function zero_tres() {
+        var result =  Math.random() * 3;
+        div_msg.innerHTML += `${result} <br>`;        
+    }
+    function menostres_zero() {
+        var result = -3 * Math.random();
+        div_msg.innerHTML += `${result} <br>`; 
+    }
+    function um_tres() {
+        var result =  (Math.random() *2 ) + 1;
+        div_msg.innerHTML += `${result} <br>`; 
+    }
+    function inteiro4_8() {
+        var result =  Math.trunc((Math.random() * 5) + 4);
+        div_msg.innerHTML += `${result} <br>`; 
+    }
+</script>
