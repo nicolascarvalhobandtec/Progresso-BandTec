@@ -2,18 +2,18 @@
 <APP>
 	<CONFIGURACAO>
     <Configuracoes>
-      <dirLogico Valor="C:\Users\Nick\Desktop\BandTec\1 Semestre\Progresso-BandTec\BandTec 2020\Banco de Dados\Sprint 2\12.10.2020\"/>
-      <dirConceitual Valor="C:\Users\Nick\Desktop\BandTec\1 Semestre\Progresso-BandTec\BandTec 2020\Banco de Dados\Sprint 2\12.10.2020\"/>
+      <dirLogico Valor="C:\Users\Nick\Desktop\BandTec\1 Semestre\Progresso-BandTec\BandTec 2020\Banco de Dados\Sprint 2\"/>
+      <dirConceitual Valor="C:\Users\Nick\Desktop\BandTec\1 Semestre\Progresso-BandTec\BandTec 2020\Banco de Dados\Sprint 2\"/>
       <showLHint Valor="True"/>
       <Tempo Valor="5"/>
       <ExibirLog Valor="False"/>
     </Configuracoes>
     <Arquivos>
-      <Arq01 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\16.10.2020\EXERCICIO04_CONCEITUAL.BRM"/>
-      <Arq02 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\EXERCICIO04_CONCEITUAL.BRM"/>
-      <Arq03 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\12.10.2020\REVISTAS_EDITORA_CONCEITUAL.BRM"/>
-      <Arq04 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\12.10.2020\REVISTA_EDITORA_LOGICO.BRM"/>
-      <Arq05 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\12.10.2020\CONCEITUAL_1.BRM"/>
+      <Arq01 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\16.10.2020\EXERCICIO04_MUSICA_ALBUM_CONCEITUAL.BRM"/>
+      <Arq02 Valor="C:\USERS\NICK\DESKTOP\BANDTEC\1 SEMESTRE\PROGRESSO-BANDTEC\BANDTEC 2020\BANCO DE DADOS\SPRINT 2\16.10.2020\EXERCICIO04_CONCEITUAL.BRM"/>
+      <Arq03 Valor=""/>
+      <Arq04 Valor=""/>
+      <Arq05 Valor=""/>
     </Arquivos>
   </CONFIGURACAO>
 	<AJUDA>
