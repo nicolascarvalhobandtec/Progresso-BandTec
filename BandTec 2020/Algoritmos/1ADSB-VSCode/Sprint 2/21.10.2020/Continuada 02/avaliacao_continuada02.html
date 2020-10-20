@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Avaliação Continuada 02 </title>
+</head>
+<body>
+    <h2> Fabricante de Cadeiras CADEIRAMOR </h2>
+    <input type="text" id="loja" placeholder="Loja">
+    <br>
+    <input type="text" id="conta" placeholder="Conta">
+    <br>
+    <input type="text" id="digito" placeholder="Digito">
+    <br>
+    <br>
+    <button onclick="conferir()"> Conferir! </button>
+</body>
+</html>
+
+<script>
+    function conferir () {
+    var sobre_loja = loja.value;
+    var sobre_conta = conta.value;
+    var sobre_digito = digito.value;
+    var resto = sobre_conta % sobre_loja;
+  
+  if (sobre_loja >= 1 && sobre_loja <= 10) {
+    alert(`Loja Válida!`);
+  } 
+  else {
+    alert(`Loja Inválida!`);
+  } 
+  if (sobre_conta <= 0) {
+    alert(`Conta Invalida!`);
+  } 
+  else {
+    alert(`Conta Válida!`);
+  } 
+  if (sobre_conta % sobre_loja < 3 && sobre_digito == 1) {
+      if(sobre_digito == 1) {
+      alert(`Válido!`);
+    } 
+    else {
+      alerta(`Inválido!`);
+    }
+  } 
+  else if (sobre_conta % sobre_loja >= 3 && sobre_conta % sobre_loja <= 5) {
+    if (sobre_digito == 2) {
+      alert(`Válido!`);
+    } 
+    else {
+      alert(`Inválido!`);
+    }
+  } 
+  else if (sobre_conta % sobre_loja > 6) {
+    if(sobre_digito == 3) {
+      alert(`Válido!`);
+    } 
+    else {
+      alert(`Inválido!`);
+    }
+  } 
+  else {
+    alert(`Dígito Inválido!`);
+  }
+}
+</script>
