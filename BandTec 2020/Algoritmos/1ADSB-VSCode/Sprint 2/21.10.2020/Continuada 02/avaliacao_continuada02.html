@@ -138,10 +138,29 @@ BOM TRABALHO
       <button onclick="entrar()"> Entrar </button>
       <button onclick="limpar()"> Limpar </button>
    </div>
+   <div id="outra_mensagem"></div>
+<br>
+<br>
+   <div id="cadeiras">
+   Produto <select id="cadeiras" onchange="encadeirar()">
+              <option value="selecionar_cadeira"> --- Selecione Sua Cadeira --- </option>
+              <option value="praia"> Cadeira de Praia </option>
+              <option value="jardim"> Cadeira de Jardim </option>
+           </select>
+   <br> 
+   <br>
+   Material <select id="materiais" onchange="materializar()">
+               <option value="selecionar_material"> --- Selecione o Material --- </option>
+               <option value="aluminio"> Alumínio </option>
+               <option value="plastico"> Plástico </option>
+               <option value="ferro"> Ferro </option>
+            </select>
+   </div>
 </body>
 </html>
 
 <script>
+     var contagem = 0;
    function conferir() {
      var sobre_loja = loja.value;
      var sobre_conta = conta.value;
@@ -150,7 +169,7 @@ BOM TRABALHO
 
       if (sobre_loja >= 1 && sobre_loja <= 10) {
          alert (`Loja Válida!`);
-      } else if (sobre_loja < 1 || sobre_loja > 10) {
+      } else {
          alert (`Loja Inválida!`);
       }
 
@@ -180,23 +199,40 @@ BOM TRABALHO
       }
 }
 
-   var contagem = 0;
    function entrar() {
 
-      if (contagem >= 4) {
-        alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`); 
+      if (digito.value == 1 && senha.value == `Recife`) {
+         outra_mensagem.innerHTML = `Senha "Recife" Válida!`;
 
-      } else if (digito.value == 1 && senha.value == `Recife`) {
+      } else if (digito.value == 1 && senha.value == `Manaus` || senha.value == `Fortaleza`) {
+            outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
+            contagem++;
+         } else if (contagem = 4) {
+            alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`);
+            outra_mensagem.innerHTML = ``;
+            
+         }
 
-      } else if (digito.value == 2 && senha.value == `Manaus`) {
-      
-      } else if (digito.value == 3 && senha.value == `Fortaleza`) {
+      // if (digito.value == 2 && senha.value == `Manaus`) {
+      //    outra_mensagem.innerHTML = `Senha "Manaus" Válida!`;
 
-      } else if (digito.value > 1) {
-        alert (`Senha Inválida!`);
-        contagem++;
-      }
+      //    } else if (digito.value == 2 && senha.value == `Recife` && senha.value == `Fortaleza`) {
+      //       outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
+      //       contagem++;
+      //    } 
+
+      // if (digito.value == 3 && senha.value == `Fortaleza`) {
+      //    outra_mensagem.innerHTML = `Senha "Fortaleza" Válida!`;
+
+      //    } else if (digito.value == 3 && senha.value == `Recife` || senha.value == `Manaus`) {
+      //       outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
+      //       contagem++;
+      //    }
+
+   if (contagem >= 4) {
+        alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`);
    }
+}
 
    function limpar() {
       senha.value = ""
