@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title> Avaliação Continuada Escrita 02 </title>
 </head>
 <body>
-    <!-- 
+     <input type="text" id="loja" placeholder="Loja...">
+    <br>
+    <br>
+     <input type="text" id="conta"  placeholder="Conta...">
+    <br>
+    <br>
+     <input type="text" id="digito"  placeholder="Dígito...">
+    <br>
+    <br>
+    <button onclick="conferir()"> Conferir! </button>
+</body>
+</html>
+
+<script>
+    function conferir() {
+        var sobre_loja = loja.value;
+        var sobre_conta = conta.value;
+        var sobre_digito = digito.value;
+
+        var resto = sobre_conta % sobre_loja.value;
+
+        if (sobre_loja >= 1 && sobre_loja <= 10) {
+            alert (`Loja Válida!`);
+        } else {
+            alert (`Loja Inválida!`);
+        }
+
+        if (sobre_conta <= 0 && sobre_conta > 10) {
+            alert (`Conta Inválida!`);
+        } else {
+            alert (`Conta Válida!`);
+        }
+        
+        if (sobre_digito == 1 && resto < 3) {
+            alert (`Dígito Válido!`);
+        } else if (sobre_digito == 2 && resto >= 3 && resto <= 6) {
+            alert (`Dígito Válido`);
+        } else if (sobre_digito == 3 && resto == 3) {
+
+        }
+    }
+</script>
+
+ <!-- 
     Instruções: 
         I. Você deve subir seu projeto aqui no MOODLE no formato HTML ou 
            ZIP caso você queira enviar as imagens junto com o seu html.
@@ -66,7 +109,7 @@ Faça um programa em HTML/JS para automatizar o orçamento de vendas.
 
    OBS2. Na quarta tentativa de senha invalida emitir um 
    alerta "Você excedeu o número de tentativas, 
-   sua conta está bloqueada, PROCURE O SUPORTE" e voltar ao item 1.
+   sua conta está bloqueada, PROCURE O SUPORTE" e voltar ao item a) 1.
 
    #ficadica, neste caso não esqueça de limpar o contador de tentativas e os campos de entrada.
 
@@ -114,5 +157,3 @@ Faça um programa em HTML/JS para automatizar o orçamento de vendas.
 
 BOM TRABALHO
  -->
-</body>
-</html>
