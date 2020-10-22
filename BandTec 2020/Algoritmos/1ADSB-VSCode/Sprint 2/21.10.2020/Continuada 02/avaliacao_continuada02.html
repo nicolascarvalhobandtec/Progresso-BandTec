@@ -75,10 +75,10 @@ Faça um programa em HTML/JS para automatizar o orçamento de vendas.
    e mostrar uma combo select com as seguintes opções de produto: “cadeira de praia” e “cadeira de jardim”.
 
 
-7. Ao selecionar um dos produtos mostrar uma foto da cadeira selecionada com 150 px de altura e abaixo da foto mostrar também nova combo select com as seguintes opções de material: “alumínio”, “plástico” e “ferro”.
+7. Ao selecionar um dos produtos mostrar uma foto da cadeira selecionada com 150 px de altura e abaixo da foto mostrar também nova combo select com as seguintes opções de materiaisial: “alumínio”, “plástico” e “ferro”.
 
 
-8. Ao selecionar um dos materiais, mostrar um campo para a entrada da quantidade de cadeiras desejada e um botão “calcular”. A quantidade tem que ser maior que zero.
+8. Ao selecionar um dos materiaisiais, mostrar um campo para a entrada da quantidade de cadeiras desejada e um botão “calcular”. A quantidade tem que ser maior que zero.
 
 
 9. Quando o botão for clicado, calcular o valor do orçamento considerando que:
@@ -102,15 +102,15 @@ Faça um programa em HTML/JS para automatizar o orçamento de vendas.
     “O orçamento para a compra de xxx yyy de zzz é R$ 99,99”, 
     onde xxx = quantidade de cadeiras, 
     yyy = é o produto selecionado, 
-    zzz é o material escolhido e 
+    zzz é o materiaisial escolhido e 
     99,99 é o valor do orçamento calculado.
 
 
 11. Abaixo do item acima emitir a mensagem: 
     “Para pagamento a vista o desconto é de kk% e 
     seu pedido ficará por R$ 77,77”, onde: kk = 5% 
-    se o material for “plástico” ou “ferro” ou 
-    kk=3,5% se o material for “alumínio”;
+    se o materiaisial for “plástico” ou “ferro” ou 
+    kk=3,5% se o materiaisial for “alumínio”;
 
 BOM TRABALHO
  -->
@@ -141,26 +141,39 @@ BOM TRABALHO
    <div id="outra_mensagem"></div>
 <br>
 <br>
-   <div id="cadeiras">
-   Produto <select id="cadeiras" onchange="encadeirar()">
+   <div id="div_cadeiras" style="display: none">
+   Produto <select id="sel_cadeiras" onchange="encadeirar()">
               <option value="selecionar_cadeira"> --- Selecione Sua Cadeira --- </option>
               <option value="praia"> Cadeira de Praia </option>
               <option value="jardim"> Cadeira de Jardim </option>
            </select>
    <br> 
    <br>
-   Material <select id="materiais" onchange="materializar()">
-               <option value="selecionar_material"> --- Selecione o Material --- </option>
+   <img src="" id="cadeira">
+   <br>
+   </div>
+   <div id="div_materiaisiais" style="display: none">
+   materiaisial <select id="materiaisiais" onchange="materiaisializar()"> 
+               <option value="selecionar_materiaisial"> --- Escolha Um materiaisial --- </option>
                <option value="aluminio"> Alumínio </option>
                <option value="plastico"> Plástico </option>
                <option value="ferro"> Ferro </option>
             </select>
    </div>
+   <br>
+   <br>
+   <div id="qtd_cadeiras" style="display: none">
+      <input type="text" id="quantidade" placeholder="Quantidade de Cadeiras Aqui ...">
+   <br>
+   <br>
+      <button onclick="calcular()"> Calcular! </button>
+      <div id="mensagem_conta"></div>
+      <div id="mensagem_conta2"></div>
+   </div>
 </body>
 </html>
 
 <script>
-     var contagem = 0;
    function conferir() {
      var sobre_loja = loja.value;
      var sobre_conta = conta.value;
@@ -199,42 +212,215 @@ BOM TRABALHO
       }
 }
 
+   var contagem = 0;
    function entrar() {
+      contagem++;
 
       if (digito.value == 1 && senha.value == `Recife`) {
-         outra_mensagem.innerHTML = `Senha "Recife" Válida!`;
+         outra_mensagem.innerHTML = `<b> Senha "Recife" Válida! </b>`;
+         acesso.style.display = "none";
+         div_cadeiras.style.display = "block";
 
-      } else if (digito.value == 1 && senha.value == `Manaus` || senha.value == `Fortaleza`) {
-            outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
-            contagem++;
-         } else if (contagem = 4) {
-            alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`);
+      } else if (digito.value == 2 && senha.value == `Manaus`) {
+         outra_mensagem.innerHTML = `<b> Senha "Manaus" Válida! </b>`;
+         acesso.style.display = "none";
+         div_cadeiras.style.display = "block";
+
+      } else if (digito.value == 3 && senha.value == `Fortaleza`) {
+         outra_mensagem.innerHTML = `<b> Senha "Fortaleza" Válida! </b>`;
+         acesso.style.display = "none";
+         div_cadeiras.style.display = "block";
+      }
+
+      if (contagem >= 4) {
+         alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`);
+            contagem = 0;
             outra_mensagem.innerHTML = ``;
-            
-         }
-
-      // if (digito.value == 2 && senha.value == `Manaus`) {
-      //    outra_mensagem.innerHTML = `Senha "Manaus" Válida!`;
-
-      //    } else if (digito.value == 2 && senha.value == `Recife` && senha.value == `Fortaleza`) {
-      //       outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
-      //       contagem++;
-      //    } 
-
-      // if (digito.value == 3 && senha.value == `Fortaleza`) {
-      //    outra_mensagem.innerHTML = `Senha "Fortaleza" Válida!`;
-
-      //    } else if (digito.value == 3 && senha.value == `Recife` || senha.value == `Manaus`) {
-      //       outra_mensagem.innerHTML += `<br> <br> Senha Inválida!`;
-      //       contagem++;
-      //    }
-
-   if (contagem >= 4) {
-        alert (`Você excedeu o número de tentativas, sua conta está bloqueada. PROCURE O SUPORTE!`);
-   }
+            outra_mensagem.innerHTML += `<br>Senha Inválida!`
+      }
 }
 
    function limpar() {
       senha.value = ""
    }
+
+   function encadeirar() {
+      if (sel_cadeiras.value == "praia") {
+         // cadeira.src = "img/cadeira.jpg";
+         // cadeira.src = "height: 150px";
+         qtd_cadeiras.style.display = "block";
+      
+      } else if (sel_cadeira.value = "jardim") {
+         // cadeira.src = "img/cadeira_jardim.jpg";
+         // cadeira.src = "height: 150px";
+         qtd_cadeiras.style.display = "block";
+      
+      } else {
+         alert ("Escolha uma Cadeira");
+      }
+   }
+
+   function calcular() {
+        var calculo;
+        var desconto1;
+        var calculo1;
+        var Avista;
+
+      if (materiais.value == "aluminio" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 75;
+            Avista = calculo * 0.035;
+            preco = calculo - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de alumínio é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>3,5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "aluminio" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 75;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.035;
+            preco = calculo1 - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de alumínio é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>3,5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "plastico" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 50;
+            Avista = calculo * 0.05;
+            preco = calculo - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de plástico é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "plastico" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 50;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.05;
+            preco = calculo1 - Avista;
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de plástico é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "ferro" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 80;
+            Avista = calculo * 0.05;
+            preco = calculo - Avista;
+            
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de ferro é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "ferro" && sel_cadeiras.value == "01" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 80;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.05;
+            preco = calculo1 - Avista;
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de praia
+            de ferro é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "aluminio" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 70;
+            Avista = calculo * 0.035;
+            preco = calculo - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de alumínio é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>3,5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "aluminio" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 70;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.035;
+            preco = calculo1 - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de alumínio é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>3,5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "plastico" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 35;
+            Avista = calculo * 0.05;
+            preco = calculo - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de plástico é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "plastico" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 35;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.05;
+            preco = calculo1 - Avista;
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de plástico é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "ferro" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 0 && qtd_cadeiras.value <= 50) {
+
+            calculo = qtd_cadeiras.value * 55;
+            Avista = calculo * 0.05;
+            preco = calculo - Avista;
+
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de ferro é R$ <b>${calculo.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (materiais.value == "ferro" && sel_cadeiras.value == "02" && qtd_cadeiras.value > 50) {
+
+            calculo = qtd_cadeiras.value * 55;
+            desconto1 = calculo * 0.03;
+            calculo1 = calculo - desconto1;
+            Avista = calculo1 * 0.05;
+            preco = calculo1 - Avista;
+            mensagem1.innerHTML = `O orçamento para a compra de <b>${qtd_cadeiras.value}</b> cadeira de jardim
+            de ferro é R$ <b>${calculo1.toFixed(1)}</b>`;
+            mensagem2.innerHTML = `Para pagamento a vista o desconto é de <b>5</b>%
+            e seu pedido ficará por R$ <b>${preco.toFixed(1)}</b>`;
+        }
+
+        else if (qtd_cadeiras.value <= 0) {
+            alert("a quantidade de cadeiras deve ser maior que 0")
+        }
+    }
+
 </script>
