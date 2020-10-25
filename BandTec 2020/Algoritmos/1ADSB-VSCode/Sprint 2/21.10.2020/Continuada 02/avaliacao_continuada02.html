@@ -220,14 +220,18 @@ BOM TRABALHO
       if (digito.value == 1 && senha.value == `Recife`) {
          acesso.style.display = `none`;
          div_cadeiras.style.display = `block`;
+         outra_mensagem.style.display = "none";
 
       } else if (digito.value == 2 && senha.value == `Manaus`) {
          acesso.style.display = `none`;
          div_cadeiras.style.display = `block`;
+         outra_mensagem.style.display = "none";
 
       } else if (digito.value == 3 && senha.value == `Fortaleza`) {
          acesso.style.display = `none`;
          div_cadeiras.style.display = `block`;
+         outra_mensagem.style.display = "none";
+
       } else {
          contagem++;
          outra_mensagem.innerHTML += `<br>Senha Inválida!`;
@@ -347,9 +351,9 @@ BOM TRABALHO
       } 
 
       mensagem_conta.innerHTML = `O orçamento para a compra de ${quantidade.value} cadeiras de 
-                                  ${sel_cadeiras.value} de ${sel_materiais.value} é R$ ${calculo}<br>`;
+                                  ${sel_cadeiras.value} de ${sel_materiais.value} é R$ ${calculo}.<br>`;
 
       mensagem_conta2.innerHTML = `Para pagamento a vista o desconto é de ${desconto2}% e seu 
-                                  pedido ficará por R$ ${calculo - calculo * (desconto2 / 100)}`;
+                                  pedido ficará por R$ ${calculo - calculo * (desconto2 / 100)}.`;
    }
 </script>
