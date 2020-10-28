@@ -42,4 +42,4 @@ select * from Alien;
 select * from Omnitrix;
 select * from Alien, Omnitrix where fkOmnitrix = idOmni;
 select * from Alien, Omnitrix where fkOmnitrix = idOmni and tecnologia = 'Azimuth';
-select avg(qtd_aparicao) as 'Aparições no Desenho' from Alien;
+select avg (qtd_aparicao) as 'Aparições no Desenho' from Alien;
