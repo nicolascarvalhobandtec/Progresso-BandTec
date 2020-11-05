@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avaliação Continuada 2</title>
+</head>
+
+<body>
+    <h3>CADEIRAMOR - Orçamento de Vendas</h3>
+    <div id="div_ent" style="display: block;">
+        Entre com a Loja: <br>
+        <input id="loja" placeholder="Loja" type="text"> <br><br>
+        Entre com a Conta: <br>
+        <input id="conta" placeholder="Conta" type="text"><br><br>
+        Entre com a Digito: <br>
+        <input id="digito" placeholder="Digito" type="text"><br><br><br>
+        <button onclick="conferir()">Conferir Aqui</button> <br><br>
+    </div>
+
+    <div id="div_senha" style="display: none;">
+        Olá Cliente, entre com a sua senha <br><br>
+        Senha: <input id="senha" placeholder="Senha" type="text"> <br><br>
+        <button onclick="entrar()">Entrar</button>
+        <button onclick="limpar()">Limpar</button> <br><br>
+        <div id="div_msg_senha"></div>
+    </div>
+
+    <select id="sel_prod" onclick="produto()" style="display: none;">
+        <option value="">Selecione o Produto</option>
+        <option value="praia">Cadeira de Praia</option>
+        <option value="jardim">Cadeira de Jardim</option>
+    </select> <br><br>
+
+    <img id="img_prod" src="" alt="" style="height: 150px;">
+    <br><br>
+    <select id="sel_mat" onchange="material()" style="display: none;">
+        <option value="">Selecione o Material</option>
+        <option value="A">Alumínio</option>
+        <option value="P">Plástico</option>
+        <option value="F">Ferro</option>
+    </select>
+    <br><br>
+    <div id="div_qtde" style="display: none;">
+        Entre com a quantidade desejada:
+        <input id="qtde" type="text" placeholder="Quantidade">
+        <button onclick="calcular()">Calcular</button>
+    </div>
+    <br><br>
+    <div id="div_orc" style="display: none;">
+        O orçamento para a compra de <b id="b_qtde"></b> <i id="i_prod"></i>
+        de <i id="i_mat"></i> é R$ <b id="b_tot"></b>
+        <br> <br>
+        Para pagamento a vista o desconto é de <b id="b_desc"></b>% e seu
+        pedido ficará por R$ <b id="b_liq"></b>
+    </div>
+
+
+</body>
+
+</html>
+<script>
+    var ax_resto = 0;
+    var ax_cont = 0;
+
+    function conferir() {
+        ax_resto = conta.value % loja.value;
+        if (loja.value < 1 || loja.value > 10) {
+            alert("Loja invalida");
+        } else if (conta.value <= 0) {
+            alert("Conta invalida");
+        } else if ((digito.value == 1 && ax_resto < 3) ||
+            (digito.value == 2 && ax_resto >= 3 && ax_resto <= 6) ||
+            (digito.value == 3 && ax_resto > 6)) {
+            div_ent.style.display = "none";
+            div_senha.style.display = "block";
+        } else {
+            alert("Digito Invalido");
+        }
+    }
+    function limpar() {
+        senha.value = "";
+    }
+    function entrar() {
+        if ((digito.value == 1 && senha.value == "recife") ||
+            (digito.value == 2 && senha.value == "manaus") ||
+            (digito.value == 3 && senha.value == "fortaleza")) {
+            div_senha.style.display = "none";
+            sel_prod.style.display = "block";
+        } else {
+            if (++ax_cont > 3) {
+                alert("Você excedeu o número de tentativas, sua conta está bloqueada, PROCURE O SUPORTE");
+                ax_cont = 0;
+                loja.value = "";
+                conta.value = "";
+                digito.value = "";
+                senha.value = "";
+                div_msg_senha.innerHTML = "";
+                div_senha.style.display = "none";
+                div_ent.style.display = "block";
+            } else {
+                div_msg_senha.innerHTML += `senha invalida <br>`;
+            }
+        }
+    }
+    function produto() {
+        div_orc.style.display = "none";
+        div_qtde.style.display = "none";
+        sel_mat.value = "";
+        qtde.value = "";
+        if (sel_prod.value == "praia") {
+            sel_mat.style.display = "block";
+            img_prod.src = "imagens/praia.jpg";
+        } else {
+            if (sel_prod.value == "jardim") {
+                sel_mat.style.display = "block";
+                img_prod.src = "imagens/jardim.jpg";
+                div_orc.style.display = "none";
+            } else {
+                sel_mat.style.display = "none";
+                img_prod.src = "";
+                div_orc.style.display = "none";
+            }
+        }
+    }
+    function material() {
+        div_orc.style.display = "none";
+        if (sel_mat.value == "") {
+            div_qtde.style.display = "none";
+        } else {
+            div_qtde.style.display = "block";
+            qtde.value = "";
+        }
+    }
+    function calcular() {
+        var preco = 0;
+        var desc = 0;
+        var tot = 0;
+
+        if (qtde.value <= 0 || isNaN(qtde.value)) {
+            alert("Informar a quantidade de produto");
+            div_orc.style.display = "none";
+        }
+        else {
+            if (sel_prod.value == "praia") {
+                preco = sel_mat.value == "A" ? 75 : sel_mat.value == "P" ? 50 : 80;
+            } else {
+                preco = sel_mat.value == "A" ? 70 : sel_mat.value == "P" ? 35 : 55;
+            }
+            b_qtde.innerHTML = qtde.value;
+            i_prod.innerHTML = sel_prod.value == "praia" ? "cadeira de praia" : "cadeira de jardim";
+            i_mat.innerHTML = sel_mat.value == "A" ? "Alumínio" : sel_mat.value == "P" ? "Plástico" : "Ferro";
+            if (qtde.value >= 50) {
+                tot = qtde.value * preco * 0.97;
+            } else {
+                tot = qtde.value * preco;
+            }
+            b_tot.innerHTML = tot.toFixed(2);
+            desc = sel_mat.value == "A" ? 3.5 : 5;
+            b_desc.innerHTML = desc;
+            b_liq.innerHTML = (tot * (100 - desc) / 100).toFixed(2);
+
+            div_orc.style.display = "block";
+        }
+    }
+
+</script>
