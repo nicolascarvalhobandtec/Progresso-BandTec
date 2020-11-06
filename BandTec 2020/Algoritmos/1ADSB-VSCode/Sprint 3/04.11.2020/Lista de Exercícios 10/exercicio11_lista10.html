@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 11 - Lista 10 </title>
+</head>
+<!-- 
+    Crie um programa em HTML/JS o qual:
+
+    a) Deve ter um botão chamado "Curto 3 e 5!"
+
+    b) Ao clicar nesse botão, devem aparecer QUASE 
+       todos os números entre 0 e 100, porém...
+
+    c) Se o número for múltiplo de 3, ao invés do 
+       número exiba "É TRI!". Se o número for múltiplo 
+       de 5, ao invés do número exiba "É PENTA!". 
+       Se o número for múltiplo de 3 e também de 5, 
+       ao invés do número exiba "É TRI!É PENTA!".
+ -->
+<body>
+    <button onclick="listar()"> Curto 3 e 5 </button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function listar() {
+        var contador = 0;
+
+        while (contador = 0 && contador <= 100) {
+            mensagem.innerHTML = `<br>${contador}`;
+        } 
+    }
+</script>
