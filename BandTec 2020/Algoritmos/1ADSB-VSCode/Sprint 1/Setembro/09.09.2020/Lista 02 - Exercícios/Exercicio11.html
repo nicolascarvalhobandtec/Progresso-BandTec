@@ -8,7 +8,7 @@
 <!-- 
         Crie um programa em HTML/JS que simule a notificação de gols numa partida de futebol assim...
 
-        a) Tenha um título grande com  a frase "Brasil x Alemanha"
+        a) Tenha um título grande com a frase "Brasil x Alemanha"
 
         b) Abaixo desse título, os botões "Gol do Brasil" e "Gol da Alemanha"
 
@@ -24,17 +24,20 @@
         E depois cada vez abaixo do que já existia e assim por diante.
      -->
 <body>
-    <h2> Brasil X Alemanha </h2>
+    <h1> Brasil X Alemanha </h1>
     <button onclick="gol_brasil()"> Gol do Brasil! </button>
     <button onclick="gol_alemanha()"> Gol da Alemanha! </button>
+    <br>
     <b> Tempo Real de Jogo </b>
-    <div id="mensagem_brasil"></div>
-    <div id="mensagem_alemanha"></div>
+    <div id="mensagem"></div>
 </body>
 </html>
 
 <script>
     function gol_brasil() {
-        
+        mensagem.innerHTML += `<br>É goooolll do Brasil!!!`;
+    }
+    function gol_alemanha() {
+        mensagem.innerHTML += `<br>É goooolll da Alemanha!!!`;
     }
 </script>

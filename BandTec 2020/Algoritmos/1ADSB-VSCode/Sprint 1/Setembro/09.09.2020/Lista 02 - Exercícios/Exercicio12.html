@@ -13,5 +13,25 @@
 
         b) A frase de gol da Alemanha apareça com cor de fundo vermelho escuro e letra amarela
      -->
+
+     <h1> Brasil X Alemanha </h1>
+    <button onclick="gol_brasil()"> Gol do Brasil! </button>
+    <button onclick="gol_alemanha()"> Gol da Alemanha! </button>
+    <br>
+    <b> Tempo Real de Jogo </b>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function gol_brasil() {
+        mensagem.innerHTML += `<br>É goooolll do Brasil!!!`;
+        mensagem.style = `background-color: green`;
+    }
+    function gol_alemanha() {
+        mensagem.innerHTML += `<br>É goooolll da Alemanha!!!`;
+        mensagem.style = `background-color: darkred; color: yellow`;
+    }
+</script>
 </body>
 </html>
