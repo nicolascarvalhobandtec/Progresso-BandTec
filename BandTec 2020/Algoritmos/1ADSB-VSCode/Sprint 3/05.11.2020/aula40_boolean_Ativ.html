@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 40 Atividade Boolean</title>
+</head>
+
+<body>
+    <!--
+        Usando variável booleana crie um programa que:
+        1 - Receba a idade e tenha um botão "Analisar"
+        2 - Ao clicar em Analisar apareça as seguintes mensagens:
+            Já passou pela infância? XXX
+            Já passou pela adolescência? YYY
+            Já passou pela fase adulta? ZZZ
+            Já entrou na melhor idade? WWW
+
+            Total de Pontos: 999
+            onde:
+                XXX = SIM se idade > 9, caso contrário NÃO
+                YYY = SIM se idade > 18, caso contrário NÃO
+                ZZZ = SIM se idade > 50, caso contrário NÃO
+                WWW = SIM se idade > 59, caso contrário NÃO
+                999 = soma de pontos, onde:
+                    quem passou pela infância recebe 2 pontos;
+                    quem passou pela adolecencia recebe 8 pontos;
+                    quem passou pela fase adulta recebe 10 pontos;
+                    quem entrou na melhor idade 20 pontos;
+        3 - Se idade estiver entre 51 e 59 emitir alerta: 
+            "Em breve você não pagará mais o busão!!!"
+    -->
+    <h3>Atividade Boolean</h3>
+    Entre com a sua idade: <input placeholder="Qual sua idade?" id="idade"> <br><br>
+    <button onclick="analisar()">Analisar</button> <br> <br>
+    <div id="div_msg" style="display: none;">
+        Já passou pela infância: <b id="b_infancia">?</b> <br>
+        Já passou pela adolescência: <b id="b_adolesc">?</b> <br>
+        Já passou pela fase adulta: <b id="b_adulto">?</b> <br>
+        Já passou entrou na melhor idade: <b id="b_melhor">?</b> <br> <br>
+        Total de Pontos: <b id="b_pontos">?</b>
+    </div>
+</body>
+</html>
+<script>
+    function analisar() {
+        div_msg.style.display = "block";
+        var pontos = 0;
+
+        var valor_idade = Number(idade.value);
+        var ja_infancia = valor_idade > 9;
+        var ja_adolesc = valor_idade > 18;
+        var ja_adulto = valor_idade > 50;
+        var ja_melhor = valor_idade > 59;
+
+        ja_infancia ? (b_infancia.innerHTML="SIM", pontos += 2): b_infancia.innerHTML="NÃO";
+        ja_adolesc ? (b_adolesc.innerHTML="SIM", pontos += 8) : b_adolesc.innerHTML="NÃO";
+        ja_adulto ? (b_adulto.innerHTML="SIM", pontos += 10) : b_adulto.innerHTML="NÃO";
+        ja_melhor ? (b_melhor.innerHTML="SIM", pontos += 20) : b_melhor.innerHTML="NÃO";
+        b_pontos.innerHTML = pontos;
+        
+        if (valor_idade >= 51 && valor_idade <= 59) {
+           alert("Em breve você não pagará mais o busão!!!");
+        }
+    }
+</script>

@@ -10,13 +10,35 @@
 
     a) Pergunte o nome da pessoa que o usuário mais ama na vida
     b) Pergunte o quanto o usuário a ama (um número inteiro)
-    c) Ao clicar num botão "Expressar amor", devem aparecer, abaixo dele, N vezes (conforme o valor em b)) a frase abaixo para a pessoa indicada em a), como neste exemplo (considerando o nome "Lady Gaga" e que ama "3")
+    c) Ao clicar num botão "Expressar amor", devem aparecer, 
+       abaixo dele, 
+       N vezes (conforme o valor em b)) 
+       a frase abaixo para a pessoa indicada em a), 
+       como neste exemplo (considerando o nome "Lady Gaga" e que ama "3")
        Lady Gaga, eu te amo! Sempre lembre disso!
        Lady Gaga, eu te amo! Sempre lembre disso!
        Lady Gaga, eu te amo! Sempre lembre disso!
-
  -->
 <body>
-    
+    Qual é nome da pessoa que você mais ama? <input type="text" id="nome">
+    <br>
+    <br>
+    O quanto você a ama? <input type="text" id="quantidade" placeholder="Expresse-se em numeros">
+    <br>
+    <br>
+    <button onclick="amar()"> Expressar Amor! </button>
+    <div id="mensagem"></div>
 </body>
 </html>
+
+<script>
+    function amar() {
+        var contador = 0;
+        var qtd_amor = Number(quantidade.value);
+
+        while (contador = qtd_amor) {
+            mensagem.innerHTML += `<b> ${nome.value} </b>, eu te amo! <i> Sempre lembre disso! </i>`;
+            contador++;
+        }
+    }
+</script>

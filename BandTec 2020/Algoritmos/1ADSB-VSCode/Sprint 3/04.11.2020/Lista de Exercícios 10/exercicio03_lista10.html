@@ -15,8 +15,12 @@
 
  -->
 <body>
-    <input type="text" id="time_bom" placeholder="Qual time de futebol você acha bom?">
-    <input type="text" id="time_ruim" placeholder="Qual time de futebol você acha ruim?">
+    Qual time de futebol você acha bom? <input type="text" id="time_bom">
+    <br>
+    <br>
+    Qual time de futebol você acha ruim? <input type="text" id="time_ruim">
+    <br>
+    <br>
     <button onclick="repetir()"> Repetir realidade! </button>
     <div id="mensagem"></div>
 </body>
@@ -24,6 +28,11 @@
 
 <script>
     function repetir() {
-        
+        var contador = 0;
+
+        while (contador < 10) {
+            mensagem.innerHTML += `<br> <b> ${time_bom.value} </b> é melhor do que <b> ${time_ruim.value} </b>`;
+            contador++;
+        }
     }
 </script>

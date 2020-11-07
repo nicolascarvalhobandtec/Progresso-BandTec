@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula39 Boolean</title>
+</head>
+
+<body>
+    <h3>Teste Boolean</h3>
+    <input id="idade" type="text"> <br><br>
+    <button onclick="analisar()">Clique Aqui</button>
+</body>
+
+</html>
+<script>
+    function analisar() {
+        // aqui é a criação de uma variável booleana
+        // ela sempre terá somente os valores true ou false
+        // eu posso usar os operadores || e &&
+        var crianca = idade.value > 0 && idade.value <= 10;
+        var adulto = idade.value > 18;
+
+        // aqui é o teste feito em uma variável booleana
+        if (crianca) {
+            alert("você é uma criança");
+        } else if (adulto && idade.value > 60) {
+            alert("você não paga o busão");
+        } else {
+            alert("pode ser que você seja um jovem!!!")
+        }
+    }
+</script>
