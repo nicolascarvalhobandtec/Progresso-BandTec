@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 03 - Lista 03 </title>
+</head>
+<!-- 
+3. Refaça a questão anterior de tal forma que a frase
+   apareça com o nome da cidade em negrito e o ano de nascimento sublinhado. -->
+<body>
+    <input type="text" id="cidade" placeholder="Cidade Natal">
+   <br>
+   <br>
+   <input type="text" id="nascimento" placeholder="Ano de Nascimento">
+   <br>
+   <br>
+   <button onclick="cadastrar()"> Cadastrar! </button>
+   <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function cadastrar() {
+        mensagem.innerHTML = `Você nasceu na cidade de <b> ${cidade.value} </b> em <u> ${nascimento.value} </u>`;
+    }
+</script>

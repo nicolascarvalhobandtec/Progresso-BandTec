@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 06 - Lista 03 </title>
+</head>
+<!-- 
+    6. Todo mundo gosta de pizza! É um prato super democrático,
+     pois existem sabores veganos, vegetarianos, sem glúten, 
+     com "low carb" (pouco carboidrato), doces etc. 
+     Crie um programa em HTML/JS o qual:
+     
+     a) Solicite o sabor e o preço da pizza
+
+     b) Solicite a quantidade de amigos que vão comer
+
+     c) Ao clicar num botão "Ver valor por amigo", calcule e exiba na tela uma frase como esta:
+        Cada amigo vai colaborar com R$X para a pizza de Y  
+
+    Note que X aparece sublinhado.
+ -->
+<body>
+    Escolha o sabor da pizza: <input type="text" id="sabor">
+    <br>
+    <br>
+    Insira o preço da pizza: <input type="text" id="preco">
+    <br>
+    <br>
+    Quantos amigos comerão a pizza? <input type="text" id="amigos">
+    <br>
+    <br>
+    <button onclick="verificar()"> Ver valor por amigo </button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    function verificar() {
+        var total = Number(preco.value) / Number(amigos.value);
+
+        mensagem.innerHTML = `Cada amigo vai colaborar com R$ <u> ${total}</u> para a pizza de ${sabor.value}.`;
+    }
+</script>
