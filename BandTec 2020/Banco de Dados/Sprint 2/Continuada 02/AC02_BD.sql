@@ -1,4 +1,6 @@
 
+drop database ac2Nicolas;
+
 create database ac2Nicolas;
 use ac2Nicolas;
 
