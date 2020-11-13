@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prática de Vetor (Exercício) </title>
+</head>
+<!-- 
+        Crie um programa que tenha um input 
+        para entrar com o nome do aluno que
+        será carregado em um vetor quando 
+        for clicado o botão "Inserir".
+
+        Essa página terá um outro botão "Mostrar",
+        que exibe os nomes inseridos, um abaixo
+        do outro.
+     -->
+<body>
+    <input type="text" id="aluno" placeholder="Entre com o nome do aluno...">
+    <br>
+    <br>
+    <button onclick="inserir()"> Inserir! </button>
+    <button onclick="mostrar()"> Mostrar! </button>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+    var total = [];
+
+    function inserir() {
+        total.push (`${aluno.value}`);
+        alert (total.length);
+    }
+
+    function mostrar() {
+        mensagem.innerHTML = `<br>${total}`;
+    }
+</script>

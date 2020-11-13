@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 42 - FOR</title>
+</head>
+<body>
+    <!-- a) Pergunte ao usuário quantos números ele quer sortear
+        b) Ao clicar em "Sortear números", sorteie N números inteiros entre 0 e 100,
+        conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro -->
+
+    <h3>Aula 42 - For </h3> 
+    Quantos números você pretende sortear: 
+    <input id="qtde" placeholder="Quantos números?" type="text"> 
+    <br><br>
+    <button onclick="sortear()">Sortear números</button> 
+    <br><br>
+    <div id="div_num"></div>
+</body>
+</html>
+<script>
+    function sortear() {
+        // -------Solução com While -------
+        // var contador = 0;
+        // div_num.innerHTML = "<b>Números Sorteados</b> <br>"; 
+        // while (contador < qtde.value) {
+        //     div_num.innerHTML += `${(Math.random()*100).toFixed(0)} <br>`;
+        //     contador++;
+        // }
+
+
+        // ------- Solução com o For  ------
+        /*
+            A estrutura de repetição 'for' é composta de 3 partes OPCIONAIS:
+            1 - Instrução de Inicialização, executada 1 (uma) vez antes do inicio do primeiro loop
+                usado para expressões de atribuição ou declação de variáveis
+            2 - Condição de repetição - avaliada a cada laço do Looping
+            3 - ÚLTIMA instrução virtual do 'for'
+        */
+        div_num.innerHTML = "<b>Números Sorteados</b> <br>"; 
+        for (var contador = 0; contador < qtde.value; contador++) {
+            div_num.innerHTML += `${(Math.random()*100).toFixed(0)} <br>`;
+            
+        }
+    }
+</script>
