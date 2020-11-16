@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula44 Vetor</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    var carros = [];  // Criação de um vetor vazio
+    alert(carros.length); // Mostra a quantidade de valores existentes no vetor
+    var velho = ["fusca", "corcel", "monza"]; // Criação de um vetor com 3 valores
+    velho.push ("corcel");  // Insere um valor no final do vetor
+    velho.push ("opala", "fiat147");  // Insere dois valores no final do vetor
+    alert (velho.length);  
+    alert (velho);  // Mostra os valores existentes no vetor
+    alert (velho[5]);  // Mostra o sexto valor do vetor
+    alert (velho.indexOf("corcel"));  // Mostra o indice da primeira ocorrencia que contem o valor especificado, 
+                                      //se não encontrar o valor no vetor será retornado -1
+    velho.pop(); // elimina a última ocorrência do vetor, ou seja, exclui o último valor do vetor
+    alert (velho);
+    velho.shift();  // elimina a primeira ocorrência do vetor, ou seja, exclui o primeiro valor do vetor
+    alert (velho);
+
+</script>

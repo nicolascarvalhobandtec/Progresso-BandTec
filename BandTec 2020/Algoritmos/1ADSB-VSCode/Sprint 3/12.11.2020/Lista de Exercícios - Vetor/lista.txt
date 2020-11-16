@@ -1,0 +1,48 @@
+          Lista de exercícios 
+1. Crie um programa em HTML/JS o qual:
+
+a) Usuário vai cadastrando os nomes de seus filmes favoritos. Digita num campo e clica em "Cadastrar"
+
+b) Ele pode cadastrar quantos filmes quiser
+
+c) Na medida que vai cadastrando, deve ser exibido ou atualizado um "painel" como neste exemplo:
+
+ 
+
+  Seu filme favorito: 50 tons de cinza
+
+  Seu 3º filme favorito: A era do gelo 1
+
+  Total de filmes cadastrados: 5
+
+ 
+
+OBS: no "3º filme", caso não tenham sido cadastrados ainda 3 filmes, exibir "Ainda não existe".
+
+OBS: o "filme favorito" é o primeiro cadastrado
+
+ 
+
+ 
+
+2. Crie um programa onde o usuário vá cadastrando os lugares para onde já viajou. Ele digita o nome do lugar e vai clica em "Cadastrar local".
+Deve haver um outro campo, onde ele digita apenas um número, indicando o local para onde viajou, a partir do número 1 (porque os usuários comuns contam as coisas a partir do 1) e clica em "Relembrar viagem". Se ele informar 1, exiba o primeiro local cadastrado e assim por diante.
+Porém, se ele informar um número maior do que a quantidade de viagens, exiba: "Você não fez uma Xª viagem!"
+
+ 
+
+3. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta. Ele digita e clica em "Cadastrar".
+Na medida em que vai cadastrando, os filmes vão aparecendo um abaixo do outro abaixo do botão.
+
+ 
+
+4. Crie um programa no qual o usuário informa os nomes dos filmes que mais gosta. Ele digita e clica em "Cadastrar".
+Na medida em que vai cadastrando, os filmes vão aparecendo um abaixo do outro abaixo do botão. SÓ QUE, aparecem na cor azul, depois vermelho, depois azul, depois vermelho, e assim por diante.
+
+ 
+
+ 
+
+5. Crie um programa no qual o usuário vai cadastrando nomes de alunos.
+
+Porém, na medida que vai cadastrando, ele vai aparecendo um abaixo do outro na ordem inversa em que foram cadastrados (ou seja, o último sempre fica no topo, o penúltimo em abaixo dele e assim por diante).

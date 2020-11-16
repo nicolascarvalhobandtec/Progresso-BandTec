@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 45 - Vetor ex</title>
+</head>
+
+<body>
+    <!--
+    Crie um programa que tenha um input para entrar com o nome do aluno que
+    será carregado em um vetor quando for clicado o botão "inserir".
+    Esse pgm terá um outro botão "mostrar", que exibe os nomes inseridos, um
+    abaixo do outro.
+
+    A solução apresentada abaixo foi criada pelo aluno: ALESSANDRO RAUL MARTINS GUEDES 
+    que gentilmente permitiu o compartilhamento da mesma.
+-->
+
+    <input type="text" id="nomeAluno" placeholder="Nome do aluno">
+    <button onclick="inserir()">Inserir</button>
+    <button onclick="mostrar()">Mostrar</button>
+    <div id="msg"></div>
+</body>
+
+</html>
+
+<script>
+    var nomes = [];
+
+    function inserir() {
+        nomes.push(nomeAluno.value);
+        nomeAluno.value = '';
+    }
+
+    function mostrar() {
+        msg.innerHTML = '';
+        for (var contador = 0; contador < nomes.length; contador++) {
+            msg.innerHTML += `<br> ${nomes[contador]}`;
+        }
+    }
+
+</script>
