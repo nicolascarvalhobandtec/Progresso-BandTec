@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Exercício 01 </title>
+</head>
+<!-- 
+    1. Crie um programa HTML/JS 
+ -->
+<body>
+    <h1> Curitiba </h1>    
+    <input type="text" id="populacao1" placeholder="Diga o número total da População de um estado...">
+<br>
+<br>
+    <input type="text" id="renda1" placeholder="Diga o número da renda per capita deste estado...">
+<br>
+<br>
+    <hr>
+<br>
+    <h1> Paraná </h1>    
+<br>
+    <input type="text" id="populacao2" placeholder="Diga o número total da População de outro estado...">
+<br>
+<br>
+    <input type="text" id="renda2" placeholder="Diga o Diga o número da renda per capita deste outro estado...">
+<br>
+<br>
+    <button onclick="verificar()"> Verificar Informações </button>
+    <br>
+    <br>
+    <br>
+    <div id="mensagem"></div>
+</body>
+</html>
+
+<script>
+
+    function verificar() {
+    var estado1 = {
+        pop = Number(populacao1.value),
+        rend = Number(renda1.value)
+    };
+    var estado2 = { 
+        pop = Number(populacao2.value), 
+        rend = Number(renda2.value)
+    };
+
+    var resultado = estado1 / estado2;
+
+        mensagem.innerHTML = `População de Curitiba: ${populacao1.value} <br> e a Renda per capita: ${renda1.value}.
+                              <br> Dividindo ambos os fatores, o resultado é: ${resultado}. <br>
+                              <hr>
+                              <br> População de Paraná: ${populacao2.value} <br> e a Renda per capita: ${renda2.value}.
+
+                              <br> Dividindo ambos os fatores, o resultado é ${resultado} <br>`;
+    }
+</script>
