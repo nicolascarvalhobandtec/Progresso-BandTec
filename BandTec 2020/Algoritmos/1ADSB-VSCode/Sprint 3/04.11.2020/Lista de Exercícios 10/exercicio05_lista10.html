@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,11 +11,11 @@
 
     a) Pergunte ao usuário quantos números ele quer sortear
     b) Ao clicar em "Sortear números", sorteie N números inteiros entre 0 e 100 - 
-    conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro
-
+       conforme o número indicado em a) - e exiba eles na tela, um embaixo do outro
  -->
+
 <body>
-    Quantos números gostaria de sortear? <input type="text" id="numeros">
+    Quantos números gostaria de sortear? <input type="number" id="numeros">
     <br>
     <br>
     <button onclick="sortear()"> Sortear números! </button>
@@ -24,8 +25,13 @@
 
 <script>
     function sortear() {
-        var contador = 0;
+        var contador = 1;
+        var num_selecionado = numeros.value;
 
-        while (contador )
+        while (num_selecionado >= contador) {
+            var resultado = Math.trunc ( (Math.random() * 100) + 0);
+            mensagem.innerHTML += `<br>${resultado}`;
+            contador++;
+        }
     }
 </script>

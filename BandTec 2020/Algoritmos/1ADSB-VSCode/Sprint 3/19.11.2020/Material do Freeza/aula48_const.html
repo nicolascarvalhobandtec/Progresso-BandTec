@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 48 - const</title>
+</head>
+<body>
+    <!-- ****OBSERVAÇÃO****
+        É importante deixar a console aberta para analisar os erros ocorrido.
+     -->
+    <h3>Variável const</h3>
+    <button onclick="mostra_bicho()">Mostra o Bicho</button>
+    <button onclick="novamente()">Mostrar de novo</button>
+</body>
+</html>
+<script>
+    // Quando criada fora das funções ela é uma constante global
+    // Todos tem acesso, mas ninguém pode alterar.
+    // Neste caso a constante bicho poderá ser usada nas duas funções
+    const bicho = 'Leão Marinho'; 
+    
+    function mostra_bicho() {
+      
+        alert(`O bicho é ${bicho}`);
+        
+    // valores criados com 'const' NÃO PODEM ser alterados!
+    // o comando abaixo dá erro pois tenta mudar o conteúdo da constante bicho
+        // bicho = "macaco";
+    }
+    
+    function novamente() {
+        alert(`Repetindo.... o bicho é ${bicho}`);
+        for (let index = 0; index < 5; index++) {
+            // Uma constrante pode ser criada dentro de uma estrutura de repetição, 
+            //     pois a cada loop (laço) é uma nova execução - vida nova!!!
+            const element = Math.random();
+            alert(`A constante sorteada é ${element}`);
+        }
+        // Constante criadas dentro de um bloco de comandos (for, while, if, etc), 
+        //     sua existência está limitada à esse bloco.
+        // O comando abaixo dá erro, pois a constante element foi criada no for acima
+        alert(`A constante sorteada é ${element}`);
+    }
+</script>

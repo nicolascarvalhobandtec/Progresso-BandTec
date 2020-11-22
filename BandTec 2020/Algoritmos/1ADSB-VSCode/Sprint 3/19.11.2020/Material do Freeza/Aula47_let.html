@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula47_Let</title>
+</head>
+<body>
+    <!-- ****OBSERVAÇÃO****
+        É importante deixar a console aberta para analisar os erros ocorrido.
+     -->
+    <h3>Aula 47 - Variável let</h3>
+    Você já clicou <b id="b_vezes">0</b> vezes <br><br>
+    <button onclick="contar()">Clique Aqui</button> <br>
+    <button onclick="atualizar()">atualize o contador</button>
+    <br><br><div id="div_msg"></div>
+    <br><br><div id="div_loop"></div>
+
+</body>
+</html>
+<script>
+    // Quando criada fora das funções ela também é uma variável global
+    // No caso abaixo a variável vezes foi criada fora das funções, portanto
+    //     seu escopo é global, ou seja, ela pode ser usada em qualquer função
+    let vezes = 0;
+
+    function contar() {
+       vezes ++;
+    }
+
+    function atualizar() {
+        b_vezes.innerHTML = vezes;
+        for (let index = 0; index < 5; index++) {
+            div_loop.innerHTML += `<br> estou na ${index} volta`;
+
+            // Quando é usada uma variável antes da sua criação, neste caso a variável frase 
+            //     se ela for criada com let dará erro, 
+            //     se ela for criada com var dará undefined
+            div_loop.innerHTML += `<br> vou mostrar a variável frase${frase}`;  
+            var frase;
+        }
+
+        // Variável criadas com "let" tem escopo bem definido, ou seja, 
+        //     se foi criada num for ela só existe dentro desse for, 
+        //     neste caso dará erro pois está usando index fora do for onde ela foi criada
+        alert (index);
+    }
+</script>

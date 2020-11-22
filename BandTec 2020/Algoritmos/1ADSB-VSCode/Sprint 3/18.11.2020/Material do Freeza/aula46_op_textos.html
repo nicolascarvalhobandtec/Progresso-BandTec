@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula46 - Operação com Textos</title>
+</head>
+
+<body>
+    <h3>Operações com textos</h3>
+    <!-- onkeyup indica o que acontecer após usar uma tecla qualquer -->
+    <input placeholder="Digite uma frase" id="frase" onkeyup="analisar_textos()"> 
+    <br><br>
+    <div id="div_msg"></div>
+</body>
+</html>
+<script>
+    function analisar_textos() {
+        var ax_var = frase.value;
+        div_msg.innerHTML = '';
+
+        div_msg.innerHTML += `Quantos caracteres? ${ax_var.length} <br>`;
+        div_msg.innerHTML += `Tudo minúsculo: ${ax_var.toLowerCase()} <br>`;
+        div_msg.innerHTML += `Tudo MAIÚSCULO: ${ax_var.toUpperCase()} <br>`;
+        div_msg.innerHTML += `Começa com "a"?: ${ax_var.startsWith('a')} <br>`;
+        div_msg.innerHTML += `Começa com "bom"?: ${ax_var.startsWith('bom')} <br>`;
+        div_msg.innerHTML += `Termina com "a"?: ${ax_var.endsWith('a')} <br>`;
+        div_msg.innerHTML += `Termina com "kkkk"?: ${ax_var.endsWith('kkkk')} <br>`;
+        div_msg.innerHTML += `Quero 10 letras iniciando com 0: ${ax_var.padStart(10, '0')} <br>`;
+        div_msg.innerHTML += `Quero 10 letras terminando com 0: ${ax_var.padEnd(10, '0')} <br>`;
+
+        div_msg.innerHTML += `Qual a 3ª letra? ${ax_var[2]} <br>`;
+        div_msg.innerHTML += `Qual a 3ª letra com charAt? ${ax_var.charAt(2)} <br>`;
+        div_msg.innerHTML += `Qual a 1ª letra? ${ax_var[0]} <br>`;
+        div_msg.innerHTML += `Qual a última letra? ${ax_var[ax_var.length - 1]} <br>`;
+        div_msg.innerHTML += `Qual a última letra com chatAt? ${ax_var.charAt(ax_var.length - 1)} <br>`;
+
+        div_msg.innerHTML += `Onde está a 1ª letra "a"? ${ax_var.indexOf('a')} <br>`;
+        div_msg.innerHTML += `Onde está a 1ª palavra "amor"? ${ax_var.indexOf('amor')} <br>`;
+        div_msg.innerHTML += `Onde está a ultima palavra "amor"? ${ax_var.lastIndexOf('amor')} <br>`;
+        div_msg.innerHTML += `Tem a palavra "amor"? ${ax_var.includes('amor')} <br>`;
+        div_msg.innerHTML += `Vou repetir a frase duas vezes ${ax_var.repeat(2)} <br>`;
+
+
+        div_msg.innerHTML += `Troque o 1ª "a" por "@"? ${ax_var.replace('a', '@')} <br>`;
+        div_msg.innerHTML += `Troque todos "amor" por "roma"? ${ax_var.replaceAll('amor', 'roma')} <br>`;
+        div_msg.innerHTML += `Troque o 1ª "i" por "1"? ${ax_var.replace('i', '1')} <br>`;
+        div_msg.innerHTML += `Extrair da 10 pos até o fim ${ax_var.slice(9)} <br>`;
+        div_msg.innerHTML += `Extrair da 10 pos até o fim com substring ${ax_var.substring(9)} <br>`;
+        div_msg.innerHTML += `Extrair da 10-15 pos ${ax_var.slice(9, 15)} <br>`;
+
+        div_msg.innerHTML += `Remover os espaços do inicio e fim ${ax_var.trim()} <br>`;
+        div_msg.innerHTML += `Remover os espaços do inicio  ${ax_var.trimStart()} <br>`;
+        div_msg.innerHTML += `Remover os espaços do fim ${ax_var.trimEnd()} <br>`;
+
+        div_msg.innerHTML += `<br><br>
+        NUNCA, NENHUMA função altera o texto original!! <br>
+        Original ===> ${ax_var} <=== Original!!! <br>`;
+    }
+</script>

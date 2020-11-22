@@ -15,16 +15,21 @@
 </html>
 <script>
     var contador = 0; // contagem de vezes que já mostrei o alert e na tela
+
     span_frases.innerHTML = '';
+
     // estrutura de REPETIÇÃO while ("enquanto")
     // o teste lógico no while chama-se "Condição de Repetição"
+    
     while (contador < 5) { // Enquanto (contador < 5) for verdade (true)...
+        
         // todo o bloco de comandos é executado novamente!
         alert (contador);
         span_frases.innerHTML += 'O amor é lindo!!! <br>';
         contador++;
         // ao chegar no final, o while é testado novamente!
     }
+    
     // quando a condição (contador < 5) for falsa (false), 
     //  o bloco de comandos do while deixa de ser executado
 
