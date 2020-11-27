@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula50 input type</title>
+</head>
+
+<body>
+    <h3>Vamos verificar alguns types diferentes?</h3>
+    Entre com uma data : <input id="in_date" type="date"> <br>
+    Entre com uma data e hora: <input id="in_dt_hr" type="datetime-local"> <br>
+    Entre com uma Semana : <input id="in_semana" type="week"> <br>
+    Entre com uma Mês : <input id="in_mes" type="month"> <br>
+    Entre com uma Horário : <input id="in_hor" type="time"> <br>
+    Entre com um Range : <input id="in_range" type="range"> <br>
+    Entre com um Password : <input id="in_psw" type="password" maxlength="8"> <br>
+    Escolha a sua Opção: <br>
+    <input id="in_pri" name="rad" type="radio"> <label id="lb_pri" for="in_pri">Peixe</label> <br>
+    <input id="in_seg" name="rad" type="radio" checked> <label for="in_seg">Carne</label> <br>
+    <input id="in_ter" name="rad" type="radio"> <label for="in_ter">Sobremesa</label> <br> <br>
+    Indique seus interesses: <br>
+    <input id="cb_pri" name="cb" type="checkbox"> <label for="in_pri">Filmes</label> <br>
+    <input id="cb_seg" name="cb" type="checkbox"> <label for="in_seg">Musicas</label> <br>
+    <input id="cb_ter" name="cb" type="checkbox" checked> <label for="in_ter">Jogos</label> <br> <br>
+    Entre uma Cidade: <input id="in_city" type="text" list="cidades"> <br>
+    <datalist id="cidades">
+        <option>Paris</option>
+        <option>Roma</option>
+    </datalist>
+
+    <br> <button onclick="analisar()" autofocus>Analisar</button>
+</body>
+
+</html>
+<script>
+    function analisar() {
+        alert(`A Data tem o tamanho: ${in_date.value.length} com o conteúdo: ${in_date.value}`);
+        alert(`A Data e Hora tem o tamanho: ${in_dt_hr.value.length} com o conteúdo: ${in_dt_hr.value}`);
+        alert(`A Semana tem o tamanho: ${in_semana.value.length} com o conteúdo: ${in_semana.value}`);
+        alert(`O Mês tem o tamanho: ${in_mes.value.length} com o conteúdo: ${in_mes.value}`);
+        alert(`O Horário tem o tamanho: ${in_hor.value.length} com o conteúdo: ${in_hor.value}`);
+        alert(`O Range tem o tamanho: ${in_range.value.length} com o conteúdo: ${in_range.value}`);
+        alert(`A Password tem o tamanho: ${in_psw.value.length} com o conteúdo: ${in_psw.value}`);
+        alert(`Radio - Primeiro: ${in_pri.checked}, Segundo: ${in_seg.checked}, Terceiro: ${in_ter.checked}`)
+        alert(`Checkbox - Primeiro: ${cb_pri.checked}, Segundo: ${cb_seg.checked}, Terceiro: ${cb_ter.checked}`)
+        alert(`Cidade entrada ${in_city.value}`)
+    }
+</script>

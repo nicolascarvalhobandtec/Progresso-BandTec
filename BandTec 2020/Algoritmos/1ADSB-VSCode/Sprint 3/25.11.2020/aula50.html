@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Aula 50 - Tipos de INPUT </title>
+</head>
+<body>
+    <h3>
+        Vamos verificar alguns types diferentes?
+    </h3>
+
+    <!-- Text -->
+    <!-- Entre com um valor: <input type="text" id="in_val">
+    <br>
+    <br> -->
+
+    <!-- Date -->
+    <!-- Entre com uma data: <input type="date" id="a_data">
+    <br>
+    <br> -->
+
+    <!-- Datatime-local -->
+    <!-- Entre com uma data e hora: <input type="datetime-local" id="a_data_e_hora">
+    <br>
+    <br> -->
+    
+    <!-- Week -->
+    <!-- Entre com uma semana: <input type="week" id="semana">
+    <br>
+    <br> -->
+
+    <!-- Month -->
+    <!-- Entre com um mês: <input type="month" id="mes">
+    <br>
+    <br> -->
+
+    <!-- Time -->
+    <!-- Entre com um horário: <input type="time" id="horario">
+    <br>
+    <br> -->
+    
+    <!-- Range -->
+    <!-- Entre com um Range: <input type="range" id="alcance">
+    <br>
+    <br> -->
+    
+    <!-- Password (com Maxlength) -->
+    <!-- Entre com uma senha: <input type="password" id="senha" maxlength="8">
+    <br>
+    <br> -->
+
+    <!-- Radio (com name, checked e label) -->
+    <!-- Escolha a Opção: 
+    <br>
+    <input type="radio" id="input_1" name="rad"> <label id="lab_1" for="input_1"> Alface </label>
+    <br>
+    <input type="radio" id="input_2" name="rad" checked> <label for="input_2"> Couve-Flor </label>
+    <br>
+    <input type="radio" id="input_3" name="rad"> <label for="input_3"> Creme de Milho </label>
+    <br>
+    <br> -->
+
+    <!-- Checkbox -->
+    <!-- Indique seus Interesses: 
+    <br>
+    <input id="check_1" name="ckbox" type="checkbox"> <label for="check_1"> Filmes </label>
+    <br>
+    <input id="check_2" name="ckbox" type="checkbox" checked> <label for="check_2"> Músicas </label>
+    <br>
+    <input id="check_3" name="ckbox" type="checkbox" checked> <label for="check_3"> Jogos </label>
+    <br>
+    <br> -->
+
+    <!-- Text com Listas -->
+    Entre com uma Cidade: <input id="city" type="text" list="cidades">
+    <br>
+    <datalist id="cidades">
+        <option> Paris </option>
+        <option> Roma </option>
+    </datalist>
+
+    <!-- button com autofocus -->
+    <button onclick="analisar()" autofocus> Analisar! </button>
+</body>
+</html>
+
+<script>
+    function analisar() {
+
+        // Indo pra data
+        // alert (`O valor tem o tamanho: ${a_data.value.length} com o conteúdo: ${a_data.value}`);
+        
+        // Indo pra data e hora
+        // alert (`O valor tem o tamanho: ${a_data_e_hora.value.length} com o conteúdo: ${a_data_e_hora.value}`);
+        
+        // Indo pra semana
+        // alert (`O valor tem o tamanho: ${semana.value.length} com o conteúdo: ${semana.value}`);
+        
+        // Indo pro mês
+        // alert (`O valor tem o tamanho: ${mes.value.length} com o conteúdo: ${mes.value}`);
+
+        // Indo pro horario
+        // alert (`O valor tem o tamanho: ${horario.value.length} com o conteúdo: ${horario.value}`);
+    
+        // // Indo pro range
+        // alert (`O valor tem o tamanho: ${alcance.value.length} com o conteúdo: ${alcance.value}`);
+
+        // // Indo pro senha
+        // alert (`O valor tem o tamanho: ${senha.value.length} com o conteúdo: ${senha.value}`);
+
+        // Indo pro radio
+        // lab_1.innerHTML = `A O B A!`;
+        // alert (`Primeiro: ${input_1.checked}, Segundo: ${input_2.checked} e Terceiro: ${input_3.checked}`);
+        
+        // Indo pro radio
+        // alert (`Primeiro: ${check_1.checked}, Segundo: ${check_2.checked} e Terceiro: ${check_3.checked}`);
+
+        // Indo pro text list
+        alert (`Cidade escolhida: ${cidades.checked}.`);
+    }
+</script>
