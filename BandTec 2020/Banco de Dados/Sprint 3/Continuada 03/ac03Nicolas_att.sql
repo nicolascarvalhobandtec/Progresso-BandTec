@@ -71,17 +71,6 @@ insert into Omnitrix_Alien values
 (2, 1, 60),
 (3, 2, 24),
 (4, 4, 1);
-select * from Omnitrix_Alien;
-
--- 4-)
-select * from Omnitrix; 
-
-select * from dnaAlien;
-
-select * from Usuario;
-
-select * from Omnitrix_Alien;
-
 
 
 -- 5-) Exibindo os dados das tabelas Omnitrix e Usuario (relacionamento um-para-muitos) 

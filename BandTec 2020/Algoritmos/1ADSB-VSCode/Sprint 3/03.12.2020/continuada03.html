@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Avaliação Continuada 03 </title>
+</head>
+<!-- 
+    Orientação:
+NÃO "zipe" (ou seja, não compacte) o(s) arquivo(s). 
+Envie o(s) arquivos que usou (página, estilos, figuras etc) um por um na tarefa. 
+NÃO envie a pasta inteira e sim os arquivos individualmente! 
+O envio da pasta ou arquivo .zip ou .7zip levará ao desconto de 2 pontos na nota!
+
+
+Questão única:
+
+A Pecuária Boi Cote controla as fases da engorda da seguinte forma: Vitelo de 30 à 200Kg; 
+  Novilho de 200 à 400kg; e Boi de 400 à 600kg. 
+  Faça um programa que auxilie a Boi de Ouro a fazer a estimativa do peso dos animais nas suas fazendas da seguinte forma:
+
+
+
+1.       Tenha quatro campos de entrada: Fazenda, Qtde de Vitelo, Qtde de Novilho e Qtde Boi,
+         além de dois botões: “Cadastrar” e “Analisar”.
+
+
+2.       Quando o botão “Cadastrar” for clicado executar os seguintes passos:
+
+
+a.       se o campo Fazenda não estiver preenchido emitir o alerta: “Preencher corretamente a Fazenda” e voltar ao item1;
+
+
+b.       pelo menos uma das quantidades (Vitelo, Novilho, Boi) tem que ser maior que zero, 
+         caso contrário, emitir o alerta “Informar a quantidade de animais corretamente” e voltar ao item1;
+
+
+c.       se o campo fazenda estiver preenchido e pelo menos uma das quantidades for maior que 0,
+         guardar as informações de entrada e voltar ao item1.
+
+
+
+3.       Quando o botão “Analisar” for clicado executar os seguintes passos:
+
+a.       se nenhuma informação foi guardada emitir o alerta: “Favor cadastrar todas as 
+         Fazendas com os seus animais” e voltar ao item1;
+
+
+b.       para cada Fazenda cadastrada calcular o peso estimado dos animais sendo:
+
+                Qtde de Vitelo * 100kg  +  Qtde de Novilho * 300kg  +  Qtde de Boi * 500kg
+
+
+c.       encontrar o Coeficiente de Análise que é a média do peso estimado dos animais 
+         de todas as Fazendas cadastradas;
+
+
+#ficaadica para encontrar o coeficiente de análise some o peso estimado dos animais de 
+         todas as fazendas e divida pela quantidade de fazendas.
+
+
+d.       abaixo dos botões, listar todas as fazendas com peso estimado maior ou igual 
+         ao Coeficiente de Análise da seguinte forma: 
+         “A Fazenda XXXXXXXXX tem: aaaa Vitelos, bbbb Novilhos e cccc Bois, sendo o peso estimado desses animais = 999999kg”,
+         onde:
+
+                                                   i.      XXXXXXXXX = é o nome da Fazenda informada no item 2;
+
+                                                 ii.      aaaa = é a quantidade de Vitelos informada no item 2;
+
+                                               iii.      bbbb = é a quantidade de Novilhos informada no item 2;
+
+                                               iv.      cccc = é a quantidade de Bois informada no item 2;
+
+                                                 v.      999999= é o peso estimado dos animais calculado no item 3.b;
+
+
+e.       abaixo de cada linha do item anterior emitir a imagem do animal predominante na Fazenda, 
+         ou seja: se naquela Fazenda tiver mais Vitelos do que Bezerros ou Bois, 
+         emitir a imagem vitelo.jpg; se tiver mais Bezerros do que Vitelos ou Bois, 
+         emitir a imagem do bezerro.jpg; se tiver mais Bois do que Vitelos ou Bezerros, 
+         emitir a imagem do boi.jpg. OBS1 se houver empate na quantidade majoritária, 
+         emitir somente uma imagem respeitando o seguinte critério de desempate: 
+         primeiro o Vitelo, depois o Bezerro e por último o Boi.
+
+OBS2 - Emitir a imagem com 60 px de altura.
+
+
+f.        ao final emitir as seguintes mensagens:
+
+COEFICIENTE DE ANÁLISE = 999999,9
+
+TOTAL DE FAZENDAS CADASTRADAS = 999
+
+TOTAL DE FAZENDAS LISTADAS = 999
+
+TOTAL GERAL DE VITELOS = 999
+
+TOTAL GERAL DE NOVILHOS = 999
+
+TOTAL GERAL DE BOIS  = 999
+
+Abaixo exemplo da disposição das mensagens:
+
+
+Imagens dos bois:
+ -->
+
+    <!-- Vitelo de 30 à 200Kg; -->
+    <!-- Novilho de 200 à 400kg; -->
+    <!-- Boi de 400 à 600kg -->
+<body>
+    <h1> Pecuária Boi Cote </h1>
+
+    <input type="text" id="fazenda" placeholder="Insira a Fazenda">
+    <br>
+    <br>
+    <input type="number" id="vitelo" placeholder="Insira a quantidade de Vitelo">
+    <br>
+    <br>
+    <input type="number" id="novilho"placeholder="Insira a quantidade de Novilho">
+    <br>
+    <br>
+    <input type="number" id="boi" placeholder="Insira a quantidade de Boi">
+    <br>
+    <br>
+    <button onclick="cadastrar()"> Cadastrar! </button>
+    <button onclick="analisar()"> Analisar! </button>
+    <div id="mensagem"></div>
+    <div id="seg_mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    let registro = [];
+
+    let agro_registro = {
+        fazenda: fazenda.value,
+        vitelo: vitelo.value,
+        boi: boi.value
+    }
+
+function cadastrar() {
+
+    if (fazenda.value == "") {
+        alert (`Preencher corretamente a Fazenda`);
+    }
+    if (vitelo.value <= 0 || novilho.value <= 0 || boi.value <= 0) {
+        alert (`Informar a quantidade de animais corretamente`);
+    } else if (fazenda.value > 0, novilho.value > 0, boi.value > 0) {
+        registro.push(agro_registro);
+        alert (`Registro Concluído!`)
+    }
+}
+
+
+function analisar() {
+
+    let num_vitelo = registro.vitelo * 100;
+    let num_novilho = registro.novilho * 300;
+    let num_boi = registro.boi * 500;
+
+    if (registro.length == 0) {
+        alert (`Favor cadastrar todas as Fazendas com seus animais`);
+    } else {
+        
+        let nome = 0;
+        let coefic_analise = 0;
+        let total = vitelo + novilho + boi;
+        mensagem.innerHTML = `Você registrou ${registro.length} fazendas`;
+
+    for (let contador = 0; contador < registro.length; contador++) {
+
+        nome += total [contador];
+        coefic_analise += agro_registro / registro;
+
+        seg_mensagem.innerHTML = `<br> A Fazenda ${registro[contador].fazenda} tem ${registro[contador].vitelo} Vitelo(s), ${registro[contador].novilho}Novilho(s), ${registro[contador].boi}Boi(s), sendo o peso estimado desses animais = ${resultado}kg`;
+        }
+    }
+}
+</script>
