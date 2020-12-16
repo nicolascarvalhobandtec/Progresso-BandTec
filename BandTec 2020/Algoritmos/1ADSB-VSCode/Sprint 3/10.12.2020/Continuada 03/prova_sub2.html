@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Prova Substitutiva - AC03 </title>
+</head>
+<body>
+    <h1> Help para a Prof. Julia </h1>
+
+    <h3> Lista da turma - 1 </h3>
+    Entre com o nome <input type="text" id="nome1">
+    Entre com a nota <input type="number" id="nota1">
+    <button onclick="cadastrar1()"> Cadastrar </button>
+    <button onclick="listar1()"> Listar </button>
+    
+    
+    <h3> Lista da turma - 2 </h3>
+    Entre com o nome <input type="text" id="nome2">
+    Entre com a nota <input type="number" id="nota2">
+
+    <button onclick="cadastrar2()"> Cadastrar </button>
+    <button onclick="listar2()"> Listar </button>
+    <br>
+    <h5> Chegou a hora de juntar as listas </h5>
+    <button onclick="juntar()"> Juntar </button>
+    <div class="mensagem"></div>
+
+</body>
+</html>
+
+<script>
+    var cadastrando = [];
+    var cadastrarpri = "";
+    var cadastrarseg = "";
+
+    function cadastrar1() {
+        if (nome1.value == "" && nota1.value < 0 || nome2.value == "" || nota2.value < 0) {
+            alert (`Preencha os campos corrtamente!`);
+            nome1.value = "";
+            nota1.value = "";
+            nome2.value = "";
+            nota2.value = "";
+        } else {
+            cadastrarpri = {
+            nome_um = nome1.value,
+            nota_um = nota1.value
+            };
+            cadastrando.push(cadastrandopri);
+        }
+    }
+
+    function listar1() {
+        mensagem.innerHTML += `<br> ${cadastrarpri.nome_um} com nota: ${cadastrandopri.nota_um}`;
+    }
+</script>
